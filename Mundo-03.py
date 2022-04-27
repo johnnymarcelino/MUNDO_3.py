@@ -67,7 +67,7 @@ print(f"Barcelona club it is in the position {times.index(pos)}ª of the classif
 
 # CHALLENGE 74
 
-from random import randint
+'''from random import randint
 
 # for tupla in range(random.randint(0, 10), 5):
 #     lista = tupla
@@ -79,22 +79,23 @@ from random import randint
 # tupla5 =
 
 c = m = n = tupla = 0
-# e = f = 0
+e = f = 0
 # tupla1 = tupla2 = tupla3 = tupla4 = 0
 while(c != 5):
-    a = randint(0, 10)
+    # a = randint(0, 10)
     # print("numeros do A", a)
-    b = randint(0, 10)
+    # b = randint(0, 10)
     # print("numeros do B", b)
-    d = randint(0, 10)
+    # d = randint(0, 10)
     # print("numeros do D", d)
-    e = randint(0, 10)
+    # e = randint(0, 10)
     # print("numeros do E", e)
-    f = randint(0, 10)
+    # f = randint(0, 10)
     # print("numeros do F", f)
+    # print()
     # tupla = tupla.split()
-    if(c == 0):
-        m = n = a = b = d = e = f
+    # if(c == 0):
+    #     m = n = a = b = d = e = f
     a = randint(0, 10)
     print("numeros do A", a)
     b = randint(0, 10)
@@ -105,6 +106,8 @@ while(c != 5):
     print("numeros do E", e)
     f = randint(0, 10)
     print("numeros do F", f)
+    if(c == 0):
+        m = n = a
     # else:
     if(a > m):
         m = a
@@ -126,8 +129,8 @@ while(c != 5):
         n = e
     if(f < n):
         n = f
-    tupla = str(a) + str(b) + str(d) + str(e) + str(f)
-    tupla = tuple(tupla)
+    # tupla = tuple(tupla)
+    tupla = ((a), (b), (d), (e), (f))
     c = 5
 print(f"The drawn numbers was: {tupla}")
 print(f"The bigger number was {m}")
@@ -149,7 +152,7 @@ print(f"The lower number was {n}")
     # tupla5 = g + tupla1 + tupla2 + tupla3 + tupla4
     # del(f)
     # total = list(tupla5)
-    # print(d)
+    # print(d)'''
 
 
 # CHALLENGE 75
@@ -159,3 +162,15 @@ val2 = int(input("Enter with any number: "))
 val3 = int(input("Enter with any number: "))
 val4 = int(input("Enter with any number: "))
 
+tupla = ((val1), (val2), (val3), (val4))
+print(tuple(tupla))
+print(tupla.count(9))
+print(tupla.index(3))
+count = 0
+for a in range(-(val1+val2+val3+val4), (val1+val2+val3+val4))
+    if(val1 % 2 == 0):
+        count += 1
+# if(val2 % 2 == 0):
+#     count += 1
+
+print(val1.count(val1 % 2 == 0))
