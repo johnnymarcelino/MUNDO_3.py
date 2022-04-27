@@ -52,7 +52,7 @@ print(f"You have choose {numeral} in numeral and this number in extensive is {nu
 
 # CHALLENGE 73
 
-times = ("São Paulo", "Vasco", "Botafogo", "Cruzeiro", "Flamengo", "Coritiba", "Juventude", "Arsenal", "Man Unt", "Milan", "Liverpool",
+'''times = ("São Paulo", "Vasco", "Botafogo", "Cruzeiro", "Flamengo", "Coritiba", "Juventude", "Arsenal", "Man Unt", "Milan", "Liverpool",
               "Inter Milão", "Real Madrid", "Barcelona", "Bayer Muniq", "Chelsea", "PSG", "Palmeiras", "Corinthians", "Zenit", "Man City")
 rank = 0
 print(f"These are the rankings of the top 5 on the soccer table:\n{times[0:5]}")
@@ -63,7 +63,99 @@ for pos in times:
         rank += 1
     if(pos == "Barcelona"):
         break
-print(f"Barcelona club it is in the position {times.index(pos)}ª of the classification!")
+print(f"Barcelona club it is in the position {times.index(pos)}ª of the classification!")'''
 
-# CHALLENGE 73
+# CHALLENGE 74
+
+from random import randint
+
+# for tupla in range(random.randint(0, 10), 5):
+#     lista = tupla
+#     print(lista)
+# tupla1 =
+# tupla2 =
+# tupla3 =
+# tupla4 =
+# tupla5 =
+
+c = m = n = tupla = 0
+# e = f = 0
+# tupla1 = tupla2 = tupla3 = tupla4 = 0
+while(c != 5):
+    a = randint(0, 10)
+    # print("numeros do A", a)
+    b = randint(0, 10)
+    # print("numeros do B", b)
+    d = randint(0, 10)
+    # print("numeros do D", d)
+    e = randint(0, 10)
+    # print("numeros do E", e)
+    f = randint(0, 10)
+    # print("numeros do F", f)
+    # tupla = tupla.split()
+    if(c == 0):
+        m = n = a = b = d = e = f
+    a = randint(0, 10)
+    print("numeros do A", a)
+    b = randint(0, 10)
+    print("numeros do B", b)
+    d = randint(0, 10)
+    print("numeros do D", d)
+    e = randint(0, 10)
+    print("numeros do E", e)
+    f = randint(0, 10)
+    print("numeros do F", f)
+    # else:
+    if(a > m):
+        m = a
+    if(b > m):
+        m = b
+    if(d > m):
+        m = d
+    if(e > m):
+        m = e
+    if(f > m):
+        m = f
+    if(a < n):
+        n = a
+    if(b < n):
+        n = b
+    if(d < n):
+        n = d
+    if(e < n):
+        n = e
+    if(f < n):
+        n = f
+    tupla = str(a) + str(b) + str(d) + str(e) + str(f)
+    tupla = tuple(tupla)
+    c = 5
+print(f"The drawn numbers was: {tupla}")
+print(f"The bigger number was {m}")
+print(f"The lower number was {n}")
+
+    # b = str(a)
+    # tupla1 = str(a)
+    # del(a)
+    # d = str(a)
+    # tupla2 = b + tupla1
+    # del(b)
+    # e = str(d)
+    # tupla3 = e + tupla1 + tupla2
+    # del(d)
+    # f = str(e)
+    # tupla4 = f + tupla1 + tupla2 + tupla3
+    # del(e)
+    # g = str(f)
+    # tupla5 = g + tupla1 + tupla2 + tupla3 + tupla4
+    # del(f)
+    # total = list(tupla5)
+    # print(d)
+
+
+# CHALLENGE 75
+
+val1 = int(input("Enter with any number: "))
+val2 = int(input("Enter with any number: "))
+val3 = int(input("Enter with any number: "))
+val4 = int(input("Enter with any number: "))
 
