@@ -64,3 +64,6 @@ for pos in times:
     if(pos == "Barcelona"):
         break
 print(f"Barcelona club it is in the position {times.index(pos)}ª of the classification!")
+
+# CHALLENGE 73
+
