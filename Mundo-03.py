@@ -157,20 +157,21 @@ print(f"The lower number was {n}")
 
 # CHALLENGE 75
 
-val1 = int(input("Enter with any number: "))
+'''val1 = int(input("Enter with any number: "))
 val2 = int(input("Enter with any number: "))
 val3 = int(input("Enter with any number: "))
 val4 = int(input("Enter with any number: "))
 
 tupla = ((val1), (val2), (val3), (val4))
 print(tuple(tupla))
-print(tupla.count(9))
-print(tupla.index(3))
+print(f"The total times showed the number '9' is {tupla.count(9)}")
+print(f"The number '3' is in position {tupla.index(3)}")
 count = 0
-for a in range(-(val1+val2+val3+val4), (val1+val2+val3+val4))
-    if(val1 % 2 == 0):
+for pos, a in enumerate(tupla):
+    if(a % 2 == 0):
         count += 1
 # if(val2 % 2 == 0):
 #     count += 1
+        print(f"We hava till now {count} even numbers and its positions is {pos}")
+print(f"The total of even numbers is {count}")'''
 
-print(val1.count(val1 % 2 == 0))
