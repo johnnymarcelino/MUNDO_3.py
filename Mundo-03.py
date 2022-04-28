@@ -197,13 +197,12 @@ print(f"The total of even numbers is {count} and they are {total2}")'''
 # CHALLENGE 76
 
 # price = (1.75, 2.00, 15.90, 25.00, 4.20, 9.99, 120.32, 22.30, 34.90)
+count = 0
+listing = ("Pencil", 1.75, "Eraser", 2.00, "notebook", 15.90, "Pencil Case", 25.00, "Protractor", 4.20, "Compass", 9.99, "Schoolbag", 120.32, "Pens", 22.30, "Books", 34.90)
+# print(listing[2], "R$", listing[3])
+for products in listing:
+    print(products[count], end="..............R$: ")
+    count += 1
+    print(listing[count])
+    # print(price)
 
-'''listing = ("Pencil", 1.75, "Eraser", 2.00, "notebook", 15.90, "Pencil Case", 25.00, "Protractor", 4.20, "Compass", 9.99, "Schoolbag", 120.32, "Pens", 22.30, "Books", 34.90)
-
-for price, products in enumerate(listing):
-    print(products[1])'''
-
-a = "python"
-b = [1, 2, 3, 5, 6, 7]
-atup = (a, b)
-print(atup[1][-1])
