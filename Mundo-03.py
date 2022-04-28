@@ -196,4 +196,3 @@ print(f"The total of even numbers is {count} and they are {total2}")'''
 
 # CHALLENGE 76
 
-
