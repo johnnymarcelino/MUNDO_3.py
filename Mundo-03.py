@@ -244,40 +244,57 @@ for n in núm:
         print(n, end=" ")'''
 
 # CHALLENGE 76
+# Crie um programa que tenha uma tupla única com nomes de produtos e seus respectivos preços, na sequência.
+# No final, mostre uma listagem de preços, organizando os dados em forma tabular.
 
 '''# price = (1.75, 2.00, 15.90, 25.00, 4.20, 9.99, 120.32, 22.30, 34.90)
 count = 0
 listing = ("Pencil", 1.75, "Eraser", 2.00, "notebook", 15.90, "Pencil Case", 25.00, "Protractor", 4.20, "Compass", 9.99, "Schoolbag", 120.32, "Pens", 22.30, "Books", 34.90)
 # print(listing[2], "R$", listing[3])
-for products in listing:
+for pos, products in enumerate(listing):
     print(products[count], end="..............R$: ")
     count += 1
     print(listing[count])
     # print(price)'''
 
+# SOLUTION FROM GUANABARA
+
+'''listing = ("Pencil", 1.75, "Eraser", 2.00, "notebook", 15.90, "Pencil Case", 25.00,
+           "Protractor", 4.20, "Compass", 9.99, "Schoolbag", 120.32, "Pens", 22.30, "Books", 34.90)
+# print(len(listing))
+print(f"{'='*30}")
+print(f"{'LIST OF PRICES':^25}")
+print("="*30)
+for pos in range(0, len(listing)):
+    if(pos % 2 == 0):
+        print(f"{listing[pos]:.<30}", end="R$")
+    else:
+        print(f"{listing[pos]:>7.2f}")'''
+
+
 # CHALLENGE 77
 
-'''lotWords = ("rice", "mouse", "notebook", "chair", "tv", "light", "sofa", "plate", "screem", "aleloui")
+lotWords = ("rice", "mouse", "notebook", "chair", "tv", "light", "sofa", "plate", "screem", "aleloui")
 for vogal in lotWords:
-    if("a" in vogal or "e" in vogal or "i" in vogal or "o" in vogal or "u" in vogal):
+    if("a" in vogal and "e" and vogal and "i" in vogal and "o" in vogal and "u" in vogal):
         a = vogal.find("a")
         e = vogal.find("e")
         i = vogal.find("i")
         o = vogal.find("o")
         u = vogal.find("u")
         print(f"In phrase {vogal}, we have the vowels {vogal[a]}, {vogal[e]}, {vogal[i]}, {vogal[o]}, {vogal[u]}")
-    if ("a" in vogal or "e" in vogal or "i" in vogal or "o" in vogal):
+    if ("a" in vogal and "e" in vogal and "i" in vogal and "o" in vogal):
         a = vogal.find("a")
         e = vogal.find("e")
         i = vogal.find("i")
         o = vogal.find("o")
         print(f"In phrase {vogal}, we have the vowels {vogal[a]}, {vogal[e]}, {vogal[i]}, {vogal[o]}")
-    if ("a" in vogal or "e" in vogal or "i" in vogal):
+    if ("a" in vogal and "e" in vogal and "i" in vogal):
         a = vogal.find("a")
         e = vogal.find("e")
         i = vogal.find("i")
         print(f"In phrase {vogal}, we have the vowels {vogal[a]}, {vogal[e]}, {vogal[i]}")
-    if ("a" in vogal or "e" in vogal):
+    if ("a" in vogal and "e" in vogal):
         a = vogal.find("a")
         e = vogal.find("e")
         print(f"In phrase {vogal}, we have the vowels {vogal[a]}, {vogal[e]}")
@@ -298,4 +315,4 @@ for vogal in lotWords:
         print(f"In phrase {vogal}, we have the vowels {vogal[u]}")
     # else:
     #     print("This is not in 'aeiou'")
-    # print(vogal)'''
+    # print(vogal)
