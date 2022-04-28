@@ -7,8 +7,9 @@
 
 '''for count in range(0, len(lanche)):
     print(f"Vou comer {lanche[count]} na posição {count}")
-print("Comi pra caramba")
-'''
+print("Comi pra caramba")'''
+
+
 '''for comida in lanche:
     print(f"Vou comer {comida}")
 print("Comi pra caramba")
@@ -273,8 +274,10 @@ for pos in range(0, len(listing)):
 
 
 # CHALLENGE 77
+#Crie um programa que tenha uma tupla com várias palavras (não usar acentos).
+# Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
 
-lotWords = ("rice", "mouse", "notebook", "chair", "tv", "light", "sofa", "plate", "screem", "aleloui")
+'''lotWords = ("rice", "mouse", "notebook", "chair", "tv", "light", "sofa", "plate", "screem", "aleloui")
 for vogal in lotWords:
     if("a" in vogal and "e" and vogal and "i" in vogal and "o" in vogal and "u" in vogal):
         a = vogal.find("a")
@@ -315,4 +318,16 @@ for vogal in lotWords:
         print(f"In phrase {vogal}, we have the vowels {vogal[u]}")
     # else:
     #     print("This is not in 'aeiou'")
-    # print(vogal)
+    # print(vogal)'''
+
+# SOLUTION FROM GUANABARA
+
+'''lotWords = ("rice", "mouse", "notebook", "chair", "tv", "light", "sofa", "plate", "screem", "aleloui")
+for vowels in lotWords:
+    print(f"\nIn the phrase {vowels.upper()} we have: ", end="")
+    for letter in vowels:
+        if(letter.lower() in "aeiou"):
+            print(letter, end=" ")'''
+
+# CLASS 17
+
