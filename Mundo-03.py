@@ -2,7 +2,7 @@
 
 # TUPLAS SÃO IMUTÁVEIS
 
-lanche = ('hambuger', 'suco', 'pizza', 'pudim', "Batata Frita")
+# lanche = ('hambuger', 'suco', 'pizza', 'pudim', "Batata Frita")
 # print(lanche[-2::-1])
 
 '''for count in range(0, len(lanche)):
@@ -196,7 +196,7 @@ print(f"The total of even numbers is {count} and they are {total2}")'''
 
 # CHALLENGE 76
 
-# price = (1.75, 2.00, 15.90, 25.00, 4.20, 9.99, 120.32, 22.30, 34.90)
+'''# price = (1.75, 2.00, 15.90, 25.00, 4.20, 9.99, 120.32, 22.30, 34.90)
 count = 0
 listing = ("Pencil", 1.75, "Eraser", 2.00, "notebook", 15.90, "Pencil Case", 25.00, "Protractor", 4.20, "Compass", 9.99, "Schoolbag", 120.32, "Pens", 22.30, "Books", 34.90)
 # print(listing[2], "R$", listing[3])
@@ -204,5 +204,49 @@ for products in listing:
     print(products[count], end="..............R$: ")
     count += 1
     print(listing[count])
-    # print(price)
+    # print(price)'''
 
+# CHALLENGE 77
+
+'''lotWords = ("rice", "mouse", "notebook", "chair", "tv", "light", "sofa", "plate", "screem", "aleloui")
+for vogal in lotWords:
+    if("a" in vogal or "e" in vogal or "i" in vogal or "o" in vogal or "u" in vogal):
+        a = vogal.find("a")
+        e = vogal.find("e")
+        i = vogal.find("i")
+        o = vogal.find("o")
+        u = vogal.find("u")
+        print(f"In phrase {vogal}, we have the vowels {vogal[a]}, {vogal[e]}, {vogal[i]}, {vogal[o]}, {vogal[u]}")
+    if ("a" in vogal or "e" in vogal or "i" in vogal or "o" in vogal):
+        a = vogal.find("a")
+        e = vogal.find("e")
+        i = vogal.find("i")
+        o = vogal.find("o")
+        print(f"In phrase {vogal}, we have the vowels {vogal[a]}, {vogal[e]}, {vogal[i]}, {vogal[o]}")
+    if ("a" in vogal or "e" in vogal or "i" in vogal):
+        a = vogal.find("a")
+        e = vogal.find("e")
+        i = vogal.find("i")
+        print(f"In phrase {vogal}, we have the vowels {vogal[a]}, {vogal[e]}, {vogal[i]}")
+    if ("a" in vogal or "e" in vogal):
+        a = vogal.find("a")
+        e = vogal.find("e")
+        print(f"In phrase {vogal}, we have the vowels {vogal[a]}, {vogal[e]}")
+    if ("a" in vogal):
+        a = vogal.find("a")
+        print(f"In phrase {vogal}, we have the vowels {vogal[a]}")
+    if ("e" in vogal):
+        e = vogal.find("e")
+        print(f"In phrase {vogal}, we have the vowels {vogal[e]}")
+    if ("i" in vogal):
+        i = vogal.find("i")
+        print(f"In phrase {vogal}, we have the vowels {vogal[i]}")
+    if ("o" in vogal):
+        o = vogal.find("o")
+        print(f"In phrase {vogal}, we have the vowels {vogal[o]}")
+    if ("u" in vogal):
+        u = vogal.find("u")
+        print(f"In phrase {vogal}, we have the vowels {vogal[u]}")
+    # else:
+    #     print("This is not in 'aeiou'")
+    # print(vogal)'''
