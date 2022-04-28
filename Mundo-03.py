@@ -58,23 +58,34 @@ while True:
 print("You have decided to quit of the program!")'''
 
 # CHALLENGE 73
+# Crie uma tupla preenchida com os 20 primeiros colocados da Tabela do Campeonato Brasileiro de Futebol,
+# na ordem de colocação. Depois mostre: a) Os 5 primeiros times. b) Os últimos 4 colocados.
+# c) Times em ordem alfabética. d) Em que posição está o time da Chapecoense.
 
-times = ("São Paulo", "Vasco", "Botafogo", "Cruzeiro", "Flamengo", "Coritiba", "Juventude", "Arsenal", "Man Unt", "Milan", "Liverpool",
+'''times = ("São Paulo", "Vasco", "Botafogo", "Cruzeiro", "Flamengo", "Coritiba", "Juventude", "Arsenal", "Man Unt", "Milan", "Liverpool",
               "Inter Milão", "Real Madrid", "Barcelona", "Bayer Muniq", "Chelsea", "PSG", "Palmeiras", "Corinthians", "Zenit", "Man City")
 rank = 0
 print(("=="*20))
+print(f"This is the list of clubs!\n{times}")
+print(("=="*20))
 print(f"These are the rankings of the top 5 on the soccer table:\n{times[0:5]}")
+print(("=="*20))
 print(f"These are the rankings of the last 4 on the soccer table:\n{times[-4:len(times):1]}")
-print(f"This is the list of the club's classification in sort {sorted(times)}")
+print(("=="*20))
+print(f"This is the list of the club's classification in sort:\n{sorted(times)}")
+print(("=="*20))
+print(f"Barcelona club it is in the position {times.index('Barcelona')+1}ª of the classification!")
 print(("=="*20))
 for pos in times:
     if(pos != "Barcelona"):
         rank += 1
     if(pos == "Barcelona"):
         break
-print(f"Barcelona club it is in the position {times.index(pos)}ª of the classification!")
+print(f"Barcelona club it is in the position {times.index(pos)+1}ª of the classification!")'''
 
 # CHALLENGE 74
+# Crie um programa que vai gerar cinco números aleatórios e colocar em uma tupla.
+# Depois disso, mostre a listagem de números gerados e também indique o menor e o maior valor que estão na tupla.
 
 '''from random import randint
 
@@ -143,7 +154,7 @@ while(c != 5):
     c = 5
 print(f"The drawn numbers was: {tupla}")
 print(f"The bigger number was {m}")
-print(f"The lower number was {n}")
+print(f"The lower number was {n}")'''
 
     # b = str(a)
     # tupla1 = str(a)
@@ -161,10 +172,24 @@ print(f"The lower number was {n}")
     # tupla5 = g + tupla1 + tupla2 + tupla3 + tupla4
     # del(f)
     # total = list(tupla5)
-    # print(d)'''
+    # print(d)
 
+# SOLUTION FROM GUANABARA
+
+'''from random import randint
+n = (randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))
+# print(f"The numbers draws were:", n)
+print("The numbers draws were: ", end="")
+for a in n:
+    print(a, end=" ")
+print()
+print(f"The biggest number draw was {max(n)}")
+print(f"The lowest number draw was {min(n)}")'''
 
 # CHALLENGE 75
+# Desenvolva um programa que leia quatro valores pelo teclado e guarde-os em uma tupla. No final, mostre:
+# A) Quantas vezes apareceu o valor 9. B) Em que posição foi digitado o primeiro valor 3.
+# C) Quais foram os números pares.
 
 '''total = 0
 val1 = int(input("Enter with any number: "))
@@ -202,6 +227,21 @@ for pos, a in enumerate(tupla):
 #     count += 1
         print(f"We hava till now {count} even numbers and its positions is {pos+1}")
 print(f"The total of even numbers is {count} and they are {total2}")'''
+
+# SOLUTION FROM GUANABARA
+
+'''núm = (int(input("Enter with a number: ")), int(input("Enter with one more number: ")),
+       int(input("Enter with another number: ")), int(input("Enter with the last number: ")))
+print(f"You have entered the numbers: {núm}")
+print(f"The value of '9' appeared {núm.count(9)} times")
+if(3 in núm):
+    print(f"The number '3' is it in {núm.index(3)+1}ª position")
+else:
+    print(f"The value of '3' is not entered at not of position!")
+print(f"The quantity of even number are: ", end="")
+for n in núm:
+    if(n % 2 == 0):
+        print(n, end=" ")'''
 
 # CHALLENGE 76
 
