@@ -43,27 +43,36 @@ print(pessoa)'''
 
 '''numExtenso = ("Zero", "One", "Two", "Tree", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
               "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty")
-numeral = int(input("Enter any number between '0' and '20': "))
-if(numeral > 20):
-    while(numeral > 20):
-        numeral = int(input("Enter any number between '0' and '20': "))
-
-print(f"You have choose {numeral} in numeral and this number in extensive is {numExtenso[numeral]}")'''
+# numeral = int(input("Enter any number between '0' and '20': "))
+# if(numeral > 20):
+#     while(numeral > 20):
+while True:
+    numeral = int(input("Enter any number between '0' and '20': "))
+    if(numeral <= 20):
+        print(f"You have chose {numeral} in numeral and this number in extensive is {numExtenso[numeral]}")
+    else:
+        continue
+    c = str(input("Would you like keeping ? [Y / N]: ")).strip()
+    if(c in "Nn"):
+        break
+print("You have decided to quit of the program!")'''
 
 # CHALLENGE 73
 
-'''times = ("São Paulo", "Vasco", "Botafogo", "Cruzeiro", "Flamengo", "Coritiba", "Juventude", "Arsenal", "Man Unt", "Milan", "Liverpool",
+times = ("São Paulo", "Vasco", "Botafogo", "Cruzeiro", "Flamengo", "Coritiba", "Juventude", "Arsenal", "Man Unt", "Milan", "Liverpool",
               "Inter Milão", "Real Madrid", "Barcelona", "Bayer Muniq", "Chelsea", "PSG", "Palmeiras", "Corinthians", "Zenit", "Man City")
 rank = 0
+print(("=="*20))
 print(f"These are the rankings of the top 5 on the soccer table:\n{times[0:5]}")
 print(f"These are the rankings of the last 4 on the soccer table:\n{times[-4:len(times):1]}")
 print(f"This is the list of the club's classification in sort {sorted(times)}")
+print(("=="*20))
 for pos in times:
     if(pos != "Barcelona"):
         rank += 1
     if(pos == "Barcelona"):
         break
-print(f"Barcelona club it is in the position {times.index(pos)}ª of the classification!")'''
+print(f"Barcelona club it is in the position {times.index(pos)}ª of the classification!")
 
 # CHALLENGE 74
 
