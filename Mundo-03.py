@@ -8,7 +8,7 @@
 '''for count in range(0, len(lanche)):
     print(f"Vou comer {lanche[count]} na posição {count}")
 print("Comi pra caramba")'''
-
+import afxres
 
 '''for comida in lanche:
     print(f"Vou comer {comida}")
@@ -392,23 +392,42 @@ print(f"O biggest value entered was {max}, in the positions {rankMax}")
 print(f"O lowest value entered was {min}, in the positions {rankMin}")'''
 # ////////////////////////////////////////////////////////
 '''valNum = []
+a = []
+b = []
 # count = max = min = rankMax = rankMin = a = 0
 count = 0
 for pos, read in enumerate(range(0, 5)):
-    valNum.append(int(input("Enter with the number for the position {}: ".format(pos))))
-    a = valNum
-    del(valNum)
-    if(max(valNum) > (a)):
-        a = pos
-    if(min(valNum) < (a)):
-        b = pos
+    add = int(input("Enter with the number for the position {}: ".format(pos)))
+    valNum.append(add)
+    count += 1
+    if(count == 1):
+        a.append(pos)
+        maior = menor = add
+    if(add > maior):
+        if(add in a):
+            if(add >= a):
+                a.remove(pos-1)
+                a.append(pos)
+            else:
+                continue
+        else:
+            a.append(pos)
+    elif(add < menor):
+        if(add in b):
+            if(add <= b):
+                b.remove(pos-1)
+                b.append(pos)
+            else:
+                continue
+        else:
+            b.append(pos)
 print(f"You entered with the values: {valNum}")
 print(f"The biggest value entered was {max(valNum)}, in the positions {a}")
 print(f"The lowest value entered was {min(valNum)}, in the positions {b}")'''
 
 # CHALLENGE 79
 
-list = []
+'''list = []
 while True:
     adicionar = int(input("Enter with a number: "))
     if(adicionar in list):
@@ -419,4 +438,13 @@ while True:
     stop = str(input("Do you want keep up ? [Y / N]: "))
     if(stop[0].upper() == "N"):
         break
-print(f"Você digitou os números: {list}")
+list.sort()
+print(f"Você digitou os números: {list}")'''
+
+# CHALLENGE 80
+
+lista = []
+for a in range(0, 5):
+    add = int(input("Enter with a number: "))
+    lista.append(add)
+print(f"Você cadastrou os números {lista}")
