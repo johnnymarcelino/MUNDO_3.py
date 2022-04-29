@@ -399,7 +399,8 @@ print(f"O lowest value entered was {min(valNum)}, in the positions {rankMin}")''
 
 # ////////////////////////////////////////////////////////
 
-'''valNum = []
+'''# Done
+valNum = []
 a = []
 b = []
 # count = max = min = rankMax = rankMin = a = 0
