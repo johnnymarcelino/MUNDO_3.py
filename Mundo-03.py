@@ -443,8 +443,11 @@ print(f"Você digitou os números: {list}")'''
 
 # CHALLENGE 80
 
-lista = []
+'''lista = []
 for a in range(0, 5):
     add = int(input("Enter with a number: "))
+    if():
     lista.append(add)
-print(f"Você cadastrou os números {lista}")
+    print(f"{add} foi adicionado na posição {}")
+print(f"Você cadastrou os números {lista}")'''
+
