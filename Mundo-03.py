@@ -373,54 +373,90 @@ print(f"Lista B: {b}")'''
 
 # CHALLENGE 78
 
-'''valNum = []
-count = max = min = rankMax = rankMin = a = 0
+'''valNum = rankMax = rankMin = []
+
+count = 0
 for pos, read in enumerate(range(0, 5)):
-    valNum.append(int(input("Enter with the number for the position {}: ".format(count))))
     count += 1
+    a = int(input("Enter with the number for the position {}: ".format(count)))
+    valNum.append(a)
     if(count == 1):
-        rankMax = rankMin = pos
-        min = max = valNum
-    if(valNum > max):
-        max = valNum
-        rankMax = pos
-    if(valNum < min):
-        min = valNum
-        rankMin = pos
+        rankMax.append(pos)
+        rankMin.append(pos)
+        maior = menor = a
+    if(a > maior):
+        maior = a
+        if(a > )
+        rankMax.remove(max(rankMax))
+        rankMax.append(pos)
+    if(a < menor):
+        menor = a
+        rankMin.append(pos)
 print(f"You entered with the values: {valNum}")
-print(f"O biggest value entered was {max}, in the positions {rankMax}")
-print(f"O lowest value entered was {min}, in the positions {rankMin}")'''
+print(f"O biggest value entered was {max(valNum)}, in the positions {rankMax}")
+print(f"O lowest value entered was {min(valNum)}, in the positions {rankMin}")'''
+
+
 # ////////////////////////////////////////////////////////
+
 '''valNum = []
 a = []
 b = []
 # count = max = min = rankMax = rankMin = a = 0
 count = 0
-for pos, read in enumerate(range(0, 5)):
-    add = int(input("Enter with the number for the position {}: ".format(pos)))
-    valNum.append(add)
+for pos, read in enumerate(range(0, 20+1)):
+    add = int(input("Enter with the number for the position {}: ".format(pos+1)))
     count += 1
     if(count == 1):
-        a.append(pos)
+        a.append(pos+1)
+        b.append(pos+1)
         maior = menor = add
     if(add > maior):
-        if(add in a):
-            if(add >= a):
-                a.remove(pos-1)
-                a.append(pos)
-            else:
-                continue
+        maior = add
+        if(add in valNum):
+            if(add > max(valNum)):
+                del(a[:])
+                a.append(pos+1)
+            if(add == max(valNum)):
+                a.append(pos+1)
+            # else:
+            #     continue
         else:
-            a.append(pos)
-    elif(add < menor):
-        if(add in b):
-            if(add <= b):
-                b.remove(pos-1)
-                b.append(pos)
-            else:
-                continue
+            if(add > max(valNum)):
+                del(a[:])
+                a.append(pos+1)
+            if(add == max(valNum)):
+                a.append(pos+1)
+            # else:
+            #     continue [5, 9, 15, 20, 45, 45, 12, 15, 16, 79, 15, 45, 7, 5, 5, 6, 45, 79, 79, 45, 5]
+    if(add < menor):
+        menor = add
+        if(add in valNum):
+            if(add < min(valNum)):
+                del(b[:])
+                b.append(pos+1)
+            if(add == min(valNum)):
+                b.append(pos+1)
+            # else:
+            #     continue
         else:
-            b.append(pos)
+            if(add < min(valNum)):
+                del(b[:])
+                b.append(pos+1)
+            if(add == min(valNum)):
+                b.append(pos+1)
+            # else:
+            #     continue
+    else:
+        if(add in valNum):
+            if(add == max(valNum)):
+                a.append(pos+1)
+            else:
+                if(add == min(valNum)):
+                    b.append(pos+1)
+    valNum.append(add)
+    print(f"Max A {max(a)}")
+    print(f"Min B {min(b)}")
 print(f"You entered with the values: {valNum}")
 print(f"The biggest value entered was {max(valNum)}, in the positions {a}")
 print(f"The lowest value entered was {min(valNum)}, in the positions {b}")'''
@@ -450,4 +486,6 @@ for a in range(0, 5):
     lista.append(add)
     print(f"{add} foi adicionado na posição {}")
 print(f"Você cadastrou os números {lista}")'''
+
+# CHALLENGE 81
 
