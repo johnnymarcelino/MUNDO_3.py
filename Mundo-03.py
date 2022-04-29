@@ -373,7 +373,7 @@ print(f"Lista B: {b}")'''
 
 # CHALLENGE 78
 
-valNum = []
+'''valNum = []
 count = max = min = rankMax = rankMin = a = 0
 for pos, read in enumerate(range(0, 5)):
     valNum.append(int(input("Enter with the number for the position {}: ".format(count))))
@@ -389,4 +389,22 @@ for pos, read in enumerate(range(0, 5)):
         rankMin = pos
 print(f"You entered with the values: {valNum}")
 print(f"O biggest value entered was {max}, in the positions {rankMax}")
-print(f"O lowest value entered was {min}, in the positions {rankMin}")
+print(f"O lowest value entered was {min}, in the positions {rankMin}")'''
+
+'''valNum = []
+# count = max = min = rankMax = rankMin = a = 0
+count = 0
+for pos, read in enumerate(range(0, 5)):
+    valNum.append(int(input("Enter with the number for the position {}: ".format(pos))))
+    # print(valNum)
+    if((valNum) > (valNum)):
+        a = pos
+    if((valNum) < (valNum)):
+        b = pos
+    # print(f"this is {a}")
+    # print(pos)
+    # print(valNum[pos])
+print(f"You entered with the values: {valNum}")
+print(f"The biggest value entered was {max(valNum)}, in the positions {a}")
+print(f"The lowest value entered was {min(valNum)}, in the positions {b}")'''
+
