@@ -410,3 +410,13 @@ print(f"The lowest value entered was {min(valNum)}, in the positions {b}")'''
 
 list = []
 while True:
+    adicionar = int(input("Enter with a number: "))
+    if(adicionar in list):
+        print("Este número já existe na lista, não vou adicionar!")
+    else:
+        list.append(adicionar)
+        print(f"O número {adicionar} foi adicionado com sucesso!")
+    stop = str(input("Do you want keep up ? [Y / N]: "))
+    if(stop[0].upper() == "N"):
+        break
+print(f"Você digitou os números: {list}")
