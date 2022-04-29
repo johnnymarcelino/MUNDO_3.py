@@ -390,21 +390,23 @@ for pos, read in enumerate(range(0, 5)):
 print(f"You entered with the values: {valNum}")
 print(f"O biggest value entered was {max}, in the positions {rankMax}")
 print(f"O lowest value entered was {min}, in the positions {rankMin}")'''
-
+# ////////////////////////////////////////////////////////
 '''valNum = []
 # count = max = min = rankMax = rankMin = a = 0
 count = 0
 for pos, read in enumerate(range(0, 5)):
     valNum.append(int(input("Enter with the number for the position {}: ".format(pos))))
-    # print(valNum)
-    if((valNum) > (valNum)):
+    a = valNum
+    del(valNum)
+    if(max(valNum) > (a)):
         a = pos
-    if((valNum) < (valNum)):
+    if(min(valNum) < (a)):
         b = pos
-    # print(f"this is {a}")
-    # print(pos)
-    # print(valNum[pos])
 print(f"You entered with the values: {valNum}")
 print(f"The biggest value entered was {max(valNum)}, in the positions {a}")
 print(f"The lowest value entered was {min(valNum)}, in the positions {b}")'''
 
+# CHALLENGE 79
+
+list = []
+while True:
