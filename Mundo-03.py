@@ -331,3 +331,43 @@ for vowels in lotWords:
 
 # CLASS 17
 
+# num = (2, 4, 8, 1, 3)
+# num[2] = 4  #  tuplas são imutáveis
+# print(num)
+'''
+num = [2, 4, 8, 1, 3]
+num[2] = 0
+# num = 5  #  receber total
+# print(num)
+num.append(6)
+num.sort()
+num.sort(reverse=True)
+num.insert(5, 10)
+num.pop(4)
+num.insert(4, 4)
+if(1 in num):
+    num.remove(4)
+else:
+    print("não encontrei o valore 1!")
+print(num)
+print(f"Essa lista tem {len(num)} elementos!")'''
+
+'''valores = list()
+# valores.append(4)
+# valores.append(9)
+# valores.append(2)
+# print(valores)
+
+for count in range(0, 6):
+    valores.append(int(input("Enter with a number: ")))
+    for c, v in enumerate(valores):
+        print(f"Na posição {c}, encontrei o valor {v}!")
+print("Cheguei ao final da lista!")'''
+
+'''a = [1, 7, 5, 3]
+# b = a  # Cria uma ligação entre as listas
+b = a[:]  # Lista B cria uma cópia de lista A
+b[2] = 9
+print(f"Lista A: {a}")
+print(f"Lista B: {b}")'''
+
