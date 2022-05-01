@@ -568,12 +568,15 @@ while True:
     if(user == "N"):
         break
 
-print(cadastro)
+print(f"The list entered with the numbers is: {cadastro}")
 print(f"The total of numbers entered were: {count}")
-a = reversed(cadastro)
-print(f"The numbers inserted in position decreasing is: {a}")
+cadastro.reverse()
+print(f"The numbers inserted in position decreasing is: {cadastro}")
 if(5 in cadastro):
     print(f"The number '5' is in the list {cadastro}, in the position {cadastro.index(5)}")
     print("The number '5' logically was entered")
 else:
     print(f"The number '5' is not in lista: {cadastro}")
+
+# CHALLENGE 82
+
