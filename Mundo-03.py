@@ -602,3 +602,5 @@ print(f"The numbers even entered were: {listaEven} and they are at totally: {eve
 print(f"The numbers odd entered were: {listaOdd} and they are at totally: {oddCount}")'''
 
 # CHALLENGE 83
+
+expressão = []
