@@ -559,7 +559,7 @@ print(f"Você cadastrou, em ordem, os números: {lista}")
 '''
 # CHALLENGE 81
 
-cadastro = []
+'''cadastro = []
 count = 0
 while True:
     cadastro.append(int(input("Enter with a number: ")))
@@ -576,7 +576,27 @@ if(5 in cadastro):
     print(f"The number '5' is in the list {cadastro}, in the position {cadastro.index(5)}")
     print("The number '5' logically was entered")
 else:
-    print(f"The number '5' is not in lista: {cadastro}")
+    print(f"The number '5' is not in lista: {cadastro}")'''
 
 # CHALLENGE 82
 
+lista1 = []
+listaEven = []
+listaOdd = []
+evenCount = 0
+oddCount = 0
+while True:
+    lista1.append(int(input("Enter with a number: ")))
+    for even in lista1:
+        if(even % 2 == 0):
+            listaEven.append(even)
+            evenCount += 1
+        else:
+            listaOdd.append(even)
+            oddCount += 1
+    contiOrBreak = str(input("Would like to continue ? [Y / N]: ")).strip().upper()[0]
+    if(contiOrBreak == "N"):
+        break
+print(f"The numbers entered in the list were: {lista1}")
+print(f"The numbers even entered were: {listaEven} and they are at totally: {evenCount}")
+print(f"The numbers odd entered were: {listaOdd} and they are at totally: {oddCount}")
