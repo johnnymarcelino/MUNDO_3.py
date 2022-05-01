@@ -481,12 +481,81 @@ print(f"Você digitou os números: {list}")'''
 # CHALLENGE 80
 
 '''lista = []
-for a in range(0, 5):
+for b, a in enumerate(range(0, 5)):
     add = int(input("Enter with a number: "))
-    if():
-    lista.append(add)
-    print(f"{add} foi adicionado na posição {}")
+    if(add not in lista):
+        for c in lista:
+            if(c < min(lista)):
+                lista.append(add)
+                print(f"{add} foi adicionado na posição {b}")
+            if(c > max(lista)):
+                lista.append(add)
+                print(f"{add} foi adicionado na posição {b}")
+    else:
+        
 print(f"Você cadastrou os números {lista}")'''
 
+# ////////////////////////////
+
+'''lista = []
+count = 0
+for b, a in enumerate(range(0, 5)):
+    add = int(input("Enter with a number: "))
+    # if(add in lista):
+    #     for c in lista:
+    #         count += 1
+    #         if(c == add):
+    #             lista.insert(lista.index(c)+count, add)
+    #             print(f"{add} foi adicionado na posição {lista.index(c)+count}")
+    #             break
+    if(add not in lista):
+        for c in lista:
+            count += 1
+            if(add > max(lista)):
+                count += 1
+                lista.insert((lista.index(max(lista)))+1, add)
+                print(f"{add} foi adicionado na última posição ({lista.index(max(lista))})º!")
+                break
+            elif(add < min(lista)):
+                count += 1
+                lista.insert((lista.index(min(lista))), add)
+                print(f"{add} foi adicionado na primeira posição ({lista.index(min(lista))})º!")
+                break
+            else:
+                if(add == c):
+                    count += 1
+                    lista.insert(lista.index(c), add)
+                    print(f"{add} foi adicionado na posição {lista.index(c)}")
+                    break
+        if (count <= 0):
+            lista.append(add)
+            print(f"{add} foi adicionado na última posição!")
+        if(add not in lista):
+            count += 1
+            for c in lista:
+                if(add > c):
+                    lista.insert(lista.index(c)+1, add)
+                    print(f"{add} foi adicionado na posição {lista.index(c)+1}")
+                    # break
+                    z = lista.count(add)
+                    if(z > 1):
+                        del(lista[1])
+        # if(count <= 0):     #  45 25 16 49 44
+        #     lista.append(add)
+        #     print(f"{add} foi adicionado na última posição!")
+        #     break
+    else:
+        if(add in lista):
+            count += 1
+            for c in lista:
+                if(c == add):
+                    lista.insert(lista.index(c), add)
+                    print(f"{add} foi adicionado na posição {lista.index(c)}")
+                    break
+    # else:
+    #     lista.append(add)
+print("="*60)
+print(f"Você cadastrou, em ordem, os números: {lista}")
+'''
 # CHALLENGE 81
 
