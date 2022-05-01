@@ -559,3 +559,21 @@ print(f"Você cadastrou, em ordem, os números: {lista}")
 '''
 # CHALLENGE 81
 
+cadastro = []
+count = 0
+while True:
+    cadastro.append(int(input("Enter with a number: ")))
+    count += 1
+    user = str(input("Wolud like to continue ? [S / N]: ")).strip().upper()[0]
+    if(user == "N"):
+        break
+
+print(cadastro)
+print(f"The total of numbers entered were: {count}")
+a = reversed(cadastro)
+print(f"The numbers inserted in position decreasing is: {a}")
+if(5 in cadastro):
+    print(f"The number '5' is in the list {cadastro}, in the position {cadastro.index(5)}")
+    print("The number '5' logically was entered")
+else:
+    print(f"The number '5' is not in lista: {cadastro}")
