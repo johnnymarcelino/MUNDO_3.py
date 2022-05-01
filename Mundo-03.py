@@ -580,23 +580,25 @@ else:
 
 # CHALLENGE 82
 
-lista1 = []
+'''lista1 = []
 listaEven = []
 listaOdd = []
 evenCount = 0
 oddCount = 0
 while True:
     lista1.append(int(input("Enter with a number: ")))
-    for even in lista1:
-        if(even % 2 == 0):
-            listaEven.append(even)
-            evenCount += 1
-        else:
-            listaOdd.append(even)
-            oddCount += 1
     contiOrBreak = str(input("Would like to continue ? [Y / N]: ")).strip().upper()[0]
-    if(contiOrBreak == "N"):
+    if (contiOrBreak == "N"):
+        for even in lista1:
+            if(even % 2 == 0):
+                listaEven.append(even)
+                evenCount += 1
+            else:
+                listaOdd.append(even)
+                oddCount += 1
         break
 print(f"The numbers entered in the list were: {lista1}")
 print(f"The numbers even entered were: {listaEven} and they are at totally: {evenCount}")
-print(f"The numbers odd entered were: {listaOdd} and they are at totally: {oddCount}")
+print(f"The numbers odd entered were: {listaOdd} and they are at totally: {oddCount}")'''
+
+# CHALLENGE 83
