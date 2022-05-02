@@ -603,4 +603,20 @@ print(f"The numbers odd entered were: {listaOdd} and they are at totally: {oddCo
 
 # CHALLENGE 83
 
-expressão = []
+'''express = list(str(input("Enter with the express: ")))
+print(express[-1])
+# print(express)
+# print(len(express))
+# print("(" in express)
+# print(express.count("("))
+# for together in express:
+# if(express[0] == ")"):
+#     print("Express is not allowed!")
+if(express.count("(") == express.count(")") and express[-1] != "(" and express[0] != ")"):
+    print("Express is allowed!")
+# elif(str(express)):
+# if(express[-1] == "("):
+#     print("Express is not allowed!")
+if(express[0] == ")" or express[-1] == "(" or express.count("(") != express.count(")")):
+    print("Express is not allowed!")'''
+
