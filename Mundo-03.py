@@ -372,6 +372,8 @@ print(f"Lista A: {a}")
 print(f"Lista B: {b}")'''
 
 # CHALLENGE 78
+# Faça um programa que leia 5 valores numéricos e guarde-os em uma lista.
+# No final, mostre qual foi o maior e o menor valor digitado e as suas respectivas posições na lista.
 
 '''valNum = rankMax = rankMin = []
 
@@ -399,13 +401,13 @@ print(f"O lowest value entered was {min(valNum)}, in the positions {rankMin}")''
 
 # ////////////////////////////////////////////////////////
 
-'''# Done
-valNum = []
+# Done
+'''valNum = []
 a = []
 b = []
 # count = max = min = rankMax = rankMin = a = 0
 count = 0
-for pos, read in enumerate(range(0, 20+1)):
+for pos, read in enumerate(range(0, 20)):
     add = int(input("Enter with the number for the position {}: ".format(pos+1)))
     count += 1
     if(count == 1):
@@ -456,13 +458,45 @@ for pos, read in enumerate(range(0, 20+1)):
                 if(add == min(valNum)):
                     b.append(pos+1)
     valNum.append(add)
-    print(f"Max A {max(a)}")
-    print(f"Min B {min(b)}")
+    # print(f"Max A {max(a)}")
+    # print(f"Min B {min(b)}")
 print(f"You entered with the values: {valNum}")
 print(f"The biggest value entered was {max(valNum)}, in the positions {a}")
 print(f"The lowest value entered was {min(valNum)}, in the positions {b}")'''
 
+# //////////////////////////////////////////////////////////////////////////////////
+
+# SOLUTION FROM GUANABARA
+
+'''lista = list()
+bigger = lower = 0
+# for rank, value in enumerate(range(0, int(input("Enter with a number: ")))):
+for value in range(0, 5):
+    # print(" First", value)
+    lista.append(int(input("Enter with a number: ")))
+    # print("Second", value)
+    if(value == 0):
+        bigger = lower = lista[value]
+    else:
+        if(lista[value] > bigger):
+            bigger = lista[value]
+        if(lista[value] < lower):
+            lower = lista[value]
+    # print(lista[value])
+print(lista)
+print(f"The biggest numbers was {bigger}, And they are in the posotion ", end=" ")
+for pos, valueB in enumerate(lista):
+    if(valueB == bigger):
+        print(f"{pos}", end="...")
+print(f"\nThe lowest number entered was: {lower}, and are in the position: ", end="")
+for pos, valueB in enumerate(lista):
+    if(valueB == lower):
+        print(f"{pos}", end="...")'''
+
+
 # CHALLENGE 79
+# Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista.
+# Caso o número já exista lá dentro, ele não será adicionado. No final, serão exibidos todos os valores únicos digitados, em ordem crescente.
 
 '''list = []
 while True:
@@ -479,6 +513,8 @@ list.sort()
 print(f"Você digitou os números: {list}")'''
 
 # CHALLENGE 80
+# Crie um programa onde o usuário possa digitar cinco valores numéricos e cadastre-os em uma lista,
+# já na posição correta de inserção (sem usar o sort()). No final, mostre a lista ordenada na tela.
 
 '''lista = []
 for b, a in enumerate(range(0, 5)):
@@ -495,11 +531,11 @@ for b, a in enumerate(range(0, 5)):
         
 print(f"Você cadastrou os números {lista}")'''
 
-# ////////////////////////////
+# ////////////////////////////  45 47 44 49 16 50 47 46 49 47
 
-'''lista = []
+'''lista = list()
 count = 0
-for b, a in enumerate(range(0, 5)):
+for b, a in enumerate(range(0, 10)):
     add = int(input("Enter with a number: "))
     # if(add in lista):
     #     for c in lista:
@@ -527,37 +563,50 @@ for b, a in enumerate(range(0, 5)):
                     lista.insert(lista.index(c), add)
                     print(f"{add} foi adicionado na posição {lista.index(c)}")
                     break
-        if (count <= 0):
+        if(count <= 0):
             lista.append(add)
             print(f"{add} foi adicionado na última posição!")
-        if(add not in lista):
-            count += 1
-            for c in lista:
-                if(add > c):
-                    lista.insert(lista.index(c)+1, add)
-                    print(f"{add} foi adicionado na posição {lista.index(c)+1}")
-                    # break
-                    z = lista.count(add)
-                    if(z > 1):
-                        del(lista[1])
-        # if(count <= 0):     #  45 25 16 49 44
+        else:
+            if(add not in lista):
+                # count += 1
+                # for c in lista:
+                if(add > lista[-1]):
+                    lista.insert(lista.index(lista[-1])+1, add)
+                    print(f"{add} foi adicionado na posição {lista.index(lista[-1])+1}")
+                else:
+                    pos = 0
+                    while(pos < len(lista)):
+                        if(add <= lista[pos]):
+                            lista.insert(pos, add)
+                            break
+                        pos += 1
+                    print(f"{add} foi adicionado na posição {lista.index(add)}")
+                        # z = lista.count(add)
+                        # if(z > 1):
+                        #     del(lista[1])
+                        #     break
+        # if(count <= 0):     #  45 25 16 49 44  /// 16, 47, 47, 44, 45, 47, 46, 47, 49, 50] //// 45 47 44 49 16 50 47 46 49 47
         #     lista.append(add)
         #     print(f"{add} foi adicionado na última posição!")
         #     break
     else:
         if(add in lista):
-            count += 1
+            # count += 1
             for c in lista:
                 if(c == add):
                     lista.insert(lista.index(c), add)
-                    print(f"{add} foi adicionado na posição {lista.index(c)}")
+                    print(f"{add} foi adicionado na posição {lista.index(c)+1}")
                     break
     # else:
     #     lista.append(add)
 print("="*60)
 print(f"Você cadastrou, em ordem, os números: {lista}")
-'''
+print(len(lista))'''
+
+
 # CHALLENGE 81
+# Crie um programa que vai ler vários números e colocar em uma lista. Depois disso, mostre:
+#  A) Quantos números foram digitados. B) A lista de valores, ordenada de forma decrescente. C) Se o valor 5 foi digitado e está ou não na lista.
 
 '''cadastro = []
 count = 0
@@ -567,18 +616,24 @@ while True:
     user = str(input("Wolud like to continue ? [S / N]: ")).strip().upper()[0]
     if(user == "N"):
         break
-
+print("="*50)
 print(f"The list entered with the numbers is: {cadastro}")
-print(f"The total of numbers entered were: {count}")
-cadastro.reverse()
-print(f"The numbers inserted in position decreasing is: {cadastro}")
+print("="*50)
+print(f"The total of elements entered were: {count}")
+print("="*50)
 if(5 in cadastro):
     print(f"The number '5' is in the list {cadastro}, in the position {cadastro.index(5)}")
     print("The number '5' logically was entered")
 else:
-    print(f"The number '5' is not in lista: {cadastro}")'''
+    print(f"The number '5' is not in lista: {cadastro}")
+print("="*50)
+cadastro.sort(reverse=True)
+print(f"The numbers inserted in position decreasing is: {cadastro}")'''
 
 # CHALLENGE 82
+# Crie um programa que vai ler vários números e colocar em uma lista.
+# Depois disso, crie duas listas extras que vão conter apenas os valores pares e os valores ímpares digitados, respectivamente.
+# Ao final, mostre o conteúdo das três listas geradas.
 
 '''lista1 = []
 listaEven = []
@@ -589,21 +644,24 @@ while True:
     lista1.append(int(input("Enter with a number: ")))
     contiOrBreak = str(input("Would like to continue ? [Y / N]: ")).strip().upper()[0]
     if (contiOrBreak == "N"):
-        for even in lista1:
-            if(even % 2 == 0):
-                listaEven.append(even)
-                evenCount += 1
-            else:
-                listaOdd.append(even)
-                oddCount += 1
         break
+for even in lista1:
+    if(even % 2 == 0):
+        listaEven.append(even)
+        evenCount += 1
+    else:
+        listaOdd.append(even)
+        oddCount += 1
 print(f"The numbers entered in the list were: {lista1}")
 print(f"The numbers even entered were: {listaEven} and they are at totally: {evenCount}")
 print(f"The numbers odd entered were: {listaOdd} and they are at totally: {oddCount}")'''
 
 # CHALLENGE 83
+# Crie um programa que vai ler vários números e colocar em uma lista.
+# Depois disso, crie duas listas extras que vão conter apenas os valores pares e os valores ímpares digitados, respectivamente.
+# Ao final, mostre o conteúdo das três listas geradas.
 
-express = list(str(input("Enter with the express: ")))
+'''express = list(str(input("Enter with the express: ")))
 # print(express[-1])
 # print(express)
 # print(len(express))
@@ -620,10 +678,31 @@ if(express.count("(") == express.count(")") and express[-1] != "(" and express[0
 else:
     if(express[0] == ")" or express[-1] == "(" or express.count("(") != express.count(")")):
         print("Express is not allowed!")
-print(len(express))
+# print(len(express))
 # print("".join(express))
 # a = []
 # for to in express:
 #     print(to)
-print(f"The Express used was '{''.join(express)}'")
+print(f"The Express used was '{''.join(express)}'")'''
+
+'''exp = str(input('Digite a expressão: '))
+print('A expressão está correta!' if exp.count('(') == exp.count(')') and exp[0] != ")" and exp[-1] != "(" else 'A expressão está errada!')'''
+
+# SOLUTION FROM GUANABARA
+
+'''express = list(str(input("Enter with the express: ")))
+pilha = list()
+for sim in express:
+    if(sim == "("):
+        pilha.append("(")
+    elif(sim == ")"):
+        if(len(pilha) > 0):
+            pilha.pop()
+        else:
+            pilha.append(")")
+            break
+if(len(pilha) == 0):
+    print("A sua expressão está certa!")
+else:
+    print("A sua expressão não está certa!")'''
 
