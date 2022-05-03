@@ -706,3 +706,87 @@ if(len(pilha) == 0):
 else:
     print("A sua expressão não está certa!")'''
 
+# CLASS 18
+
+'''teste = list()
+teste.append("Johnny")
+teste.append(26)
+print(teste)
+galera = list()
+galera.append(teste[:])
+print(galera)
+teste[0] = "Jorge"
+teste[1] = 30
+print(galera)
+galera.append(teste[:])
+print(galera)'''
+
+'''galera = [["Danilo", 40], ["Alana", 25], ["Jose", 26], ["João", 18]]
+# print(galera[3][0])
+for p in galera:
+    # print(p[0][1])
+    print(f"{p[0]}, tem {p[1]} anos de idade")'''
+
+'''galera = list()
+dados = list()
+totmaoir = totmenor = 0
+for c in range(0, 3):
+    dados.append(str(input("Digite o nome: ")))
+    dados.append(int(input("Digite idade: ")))
+    galera.append(dados[:])
+    dados.clear()
+# print(galera)
+for p in galera:
+    if(p[1] >= 21):
+        print(f"{p[0]}, é maior de idade!")
+        totmaoir += 1
+    else:
+        print(f"{p[0]}, é menor de idade!")
+        totmenor += 1
+print(f"O total de maiores de idade é {totmaoir} e de menor é {totmenor}")'''
+
+# CHALLENGE 84
+
+nome = list()
+dada = list()
+heaviestLi = list()
+lightestLi = list()
+person = 0
+while True:
+    nome.append(str(input("What is your name: ")))
+    nome.append(float(input("How much weight are you: ")))
+    contOrBrk = str(input("Would like to continue [Y / N] ? "))
+    dada.append(nome[:])
+    nome.clear()
+    if(contOrBrk[0].upper().strip() == "N"):
+        break
+for p in dada:
+    if(p[0] == p[0]):
+        person += 1
+        nome.append(p[0])
+heaviest = dada[0][1]
+lighter = dada[0][1]
+count = 0
+for w in dada:
+    if(w[1] >= heaviest):
+        # print(f"{w[0]} is the most heaviest!")
+        if(w[1] == heaviest):
+            heaviestLi.append(w[0])
+        if(w[1] > heaviest):
+            heaviest = w[1]
+            heaviestLi.clear()
+            heaviestLi.append(w[0])
+    if(w[1] <= lighter):
+        # print(f"{w[0]} is the most lightest!")
+        if(w[1] == lighter):
+            lightestLi.append(w[0])
+        if(w[1] < lighter):
+            lighter = w[1]
+            lightestLi.clear()
+            lightestLi.append(w[0])
+    count += 1
+print(f"The list you have entered was: {dada}")
+print(f"The total of people register was: {person}")
+print(f"They are: {nome}")
+print(f"The people who is the most heaviest is {heaviestLi}, with {heaviest}Kg!")
+print(f"The people who is the most lightest is {lightestLi}, with {lighter}Kg!")
