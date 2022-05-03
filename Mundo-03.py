@@ -793,3 +793,14 @@ print(f"The people who is the most lightest is {lightestLi}, with {lighter}Kg!")
 
 # CHALLENGE 85
 
+'''val = list()
+evenAndOdd = list()
+for rank, c in enumerate(range(0, 7)):
+    user = int(input(f"Enter with the {rank+1}o. value: "))
+    val.append(user)
+for a in val:
+    if(a % 2 == 0):
+        evenAndOdd.append(val[1:][a])
+    else:
+        evenAndOdd.append(val[0:][a])
+print(evenAndOdd)'''
