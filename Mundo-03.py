@@ -747,7 +747,7 @@ print(f"O total de maiores de idade é {totmaoir} e de menor é {totmenor}")'''
 
 # CHALLENGE 84
 
-nome = list()
+'''nome = list()
 dada = list()
 heaviestLi = list()
 lightestLi = list()
@@ -789,4 +789,7 @@ print(f"The list you have entered was: {dada}")
 print(f"The total of people register was: {person}")
 print(f"They are: {nome}")
 print(f"The people who is the most heaviest is {heaviestLi}, with {heaviest}Kg!")
-print(f"The people who is the most lightest is {lightestLi}, with {lighter}Kg!")
+print(f"The people who is the most lightest is {lightestLi}, with {lighter}Kg!")'''
+
+# CHALLENGE 85
+
