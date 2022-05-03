@@ -681,15 +681,22 @@ valueTotal = 0
 one_hundred = 0
 cheaper = 0
 expensive = 0
+lista = list()
+lista1 = list()
+lista2 = list()
 # product1 = str()
 # while(user[0] == "Y" or user[0] != "N"):
 while True:
     product = str(input("What is the name of this product ? ")).strip().upper()
     price = float(input("What is your price ? "))
     valueTotal += price
+    lista.append(product)
     if(price > 1000):
         one_hundred += 1
         product1 = product
+        lista1.append(product)
+    if(price < 1000):
+        lista2.append(product)
     if(cheaper == 0 and expensive == 0):
         expensive = price
         cheaper = price
@@ -699,6 +706,7 @@ while True:
         if(price > expensive):
             expensive = price
             expensive_product = product
+            # lista1.append(product)
         if(price < cheaper):
             cheaper = price
             cheaper_product = product
@@ -710,9 +718,9 @@ while True:
     # else:
     #     if(user[0] == "N"):
     #         break
-print(f"The total value spent was {valueTotal:.2f} and they are:")
-print(f"The amount of product with the value up to $ 100.00 is {one_hundred}")
-print(f"The name of the product cheaper is {cheaper_product} and its value is {cheaper}")
+print(f"The total value spent was {valueTotal:.2f} and they are: {lista}")
+print(f"The amount of product with the value up to $ 1000.00 is {one_hundred}, and they are: {lista1}")
+print(f"The name of the product cheaper is {cheaper_product}, its value is {cheaper} and they are: {lista2}")
 print(f"The name of the product more expensive is {expensive_product} and its value is {expensive}")'''
 
 # CHALLENGE 71
