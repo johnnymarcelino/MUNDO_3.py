@@ -857,20 +857,53 @@ for d in a:
 
 '''a = list()
 count = 0
+somaPar = 0
+tercCol = 0
+maior = 0
 for c in range(0, 3):
     for x in range(0,3):
         if(count < 3):
-            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(c, x))))
+            user = int(input("Digite o primeiro valor para [{}, {}]: ".format(c, x)))
+            if(user % 2 == 0):
+                somaPar += user
+            if(count == 2):
+                tercCol += user
+            if(c == 1):
+                maior = user
+            # if(count > 3):
+                if(user > maior):
+                    maior = user
+            a.append(user)
             count += 1
     count = 0
     for y in range(3, 6):
         if(count > 2 and count < 6):
-            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y))))
+            user = int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y)))
+            if(user % 2 == 0):
+                somaPar += user
+            if(count == 5):
+                tercCol += user
+            if(count == 3):
+                maior = user
+            if(count > 3):
+                if(user > maior):
+                    maior = user
+            a.append(user)
             count += 1
     count = 0
     for z in range(7, 9):
         if(count > 5 and count < 10):
-            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(count+c, z))))
+            user = int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y)))
+            if(user % 2 == 0):
+                somaPar += user
+            if (count == 9):
+                tercCol += user
+            if (count == 3):
+                maior = user
+            if(count > 3):
+                if(user > maior):
+                    maior = user
+            a.append(user)
             count += 1
 count = 0
 for d in a:
@@ -888,4 +921,10 @@ count = 0
 for d in a:
     if(count > 5):
         print("[ {} ]".format(d) , end="")
-    count += 1'''
+    count += 1
+print()
+print("="*50)
+print("A soma de todos os valores pares digitados foram: {}".format(somaPar))
+print("A soma de todos os valores da terceira coluna digitados foram: {}".format(tercCol))
+print("O maior valor digitado da segunda linha foi: {}".format(maior))'''
+
