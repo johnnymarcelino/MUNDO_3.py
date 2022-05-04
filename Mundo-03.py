@@ -8,7 +8,6 @@
 '''for count in range(0, len(lanche)):
     print(f"Vou comer {lanche[count]} na posição {count}")
 print("Comi pra caramba")'''
-import afxres
 
 '''for comida in lanche:
     print(f"Vou comer {comida}")
@@ -796,11 +795,60 @@ print(f"The people who is the most lightest is {lightestLi}, with {lighter}Kg!")
 '''val = list()
 evenAndOdd = list()
 for rank, c in enumerate(range(0, 7)):
-    user = int(input(f"Enter with the {rank+1}o. value: "))
-    val.append(user)
-for a in val:
-    if(a % 2 == 0):
-        evenAndOdd.append(val[1:][a])
+    user = int(input(f"Enter with the {rank+1}º. value: "))
+    val.append([user][0])
+    # print(val)
+for d in val:
+    if(d % 2 == 0):
+        evenAndOdd.append([[1], [0]])
     else:
-        evenAndOdd.append(val[0:][a])
+        if(d % 2 == 1):
+            evenAndOdd.append([[0], [1]])
 print(evenAndOdd)'''
+
+# print(val)
+# for a in val:
+#     if(a % 2 == 0):
+#         evenAndOdd.append()
+#     else:
+#         evenAndOdd.append([0][0])
+# # j = evenAndOdd[0][1]
+# print(evenAndOdd)
+# print(j)
+
+# CHALLENGE 86
+
+a = list()
+count = 0
+for c in range(0, 3):
+    for x in range(0,3):
+        if(count < 3):
+            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(c, x))))
+            count += 1
+    count = 0
+    for y in range(3, 6):
+        if(count > 2 and count < 6):
+            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y))))
+            count += 1
+    count = 0
+    for z in range(7, 9):
+        if(count > 5 and count < 10):
+            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(count+c, z))))
+            count += 1
+count = 0
+for d in a:
+    if(count < 3):
+        print("[ {} ]".format(d), end="")
+    count += 1
+print()
+count = 0
+for d in a:
+    if(count > 2 and count < 6):
+        print("[ {} ]".format(d) , end="")
+    count += 1
+print()
+count = 0
+for d in a:
+    if(count > 5):
+        print("[ {} ]".format(d) , end="")
+    count += 1
