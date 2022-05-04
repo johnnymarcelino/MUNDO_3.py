@@ -818,7 +818,7 @@ print(evenAndOdd)'''
 
 # CHALLENGE 86 - DONE
 
-a = list()
+'''a = list()
 count = 0
 for c in range(0, 3):
     for x in range(0,3):
@@ -851,4 +851,4 @@ count = 0
 for d in a:
     if(count > 5):
         print("[ {} ]".format(d) , end="")
-    count += 1
+    count += 1'''
