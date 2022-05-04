@@ -852,3 +852,40 @@ for d in a:
     if(count > 5):
         print("[ {} ]".format(d) , end="")
     count += 1'''
+
+# CHALLENGE 87
+
+'''a = list()
+count = 0
+for c in range(0, 3):
+    for x in range(0,3):
+        if(count < 3):
+            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(c, x))))
+            count += 1
+    count = 0
+    for y in range(3, 6):
+        if(count > 2 and count < 6):
+            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y))))
+            count += 1
+    count = 0
+    for z in range(7, 9):
+        if(count > 5 and count < 10):
+            a.append(int(input("Digite o primeiro valor para [{}, {}]: ".format(count+c, z))))
+            count += 1
+count = 0
+for d in a:
+    if(count < 3):
+        print("[ {} ]".format(d), end="")
+    count += 1
+print()
+count = 0
+for d in a:
+    if(count > 2 and count < 6):
+        print("[ {} ]".format(d) , end="")
+    count += 1
+print()
+count = 0
+for d in a:
+    if(count > 5):
+        print("[ {} ]".format(d) , end="")
+    count += 1'''
