@@ -816,7 +816,7 @@ print(evenAndOdd)'''
 # print(evenAndOdd)
 # print(j)
 
-# CHALLENGE 86
+# CHALLENGE 86 - DONE
 
 a = list()
 count = 0
