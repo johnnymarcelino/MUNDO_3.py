@@ -52,7 +52,7 @@
 #     a.append(str(round(pi, i)))
 # print(a)
 
-matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+# matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
 # # print(len(matrix[0]))
 # for row in matrix:
 #     # print(len(row))
@@ -81,3 +81,61 @@ matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
 # print(a)
 # del(a[2:5])
 # print(a)
+
+# numeros = []
+# for n in range(0, 10):
+#     numeros += [n]  # concatenação de listas / numeros transformam-se em listas!
+# print(numeros)
+
+# numeros = []
+# for n in range(0, 10):
+#     numeros += [n]
+# print(numeros)
+# print()
+# soma = 0
+# for n in numeros:
+#     print(n)
+#     soma += n
+# print(f"A soma de todos é {soma}")
+
+# numeros = []
+# for n in range(1, 10+1):
+#     numeros += [n]
+# print(numeros)
+# print()
+# for n in numeros:
+#     print(f"O dobro do valor do elemento {n} na lista é {n*2}")
+
+# numeros = []
+# for n in range(1, 10+1):
+#     numeros.append(n)
+# for n in range(len(numeros)):
+#     numeros[n] = numeros[n]*2
+#     # print(numeros[n])
+# print(numeros)
+# for n in numeros:
+#     print(n)
+
+# numeros = []
+# for n in range(1, 10+1):
+#     numeros.append(n)
+#     print(f"Número {n}: {n}")
+
+# materias = int(input("Quantas materiais voce tem na escola ? "))
+# disciplinas = []
+# for c in range(materias):
+#     disciplinas.append(str(input("Quais são as materias: ")))
+# print(f"As suas materias são: {disciplinas}")
+# print()
+# # print("Dig")
+# media = 0
+# nota = []
+# for notas in disciplinas:
+#     valor = float(input(f"Qual foi a sua nota em {notas}: "))
+#     nota.append(valor)
+#     media += valor
+# for b in range(len(nota)):
+#     print(f"A sua nota em {disciplinas[b]}: {nota[b]}")
+# print(f"Portanto a sua média geral é de {media/materias}")
+# # for media in nota:
+# #     print("Portanto, a sua médi {}")
