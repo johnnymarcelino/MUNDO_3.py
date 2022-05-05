@@ -883,11 +883,11 @@ for c in range(0, 3):
                 somaPar += user
             if(count == 5):
                 tercCol += user
-            if(count == 3):
-                maior = user
-            if(count > 3):
-                if(user > maior):
-                    maior = user
+            # if(count == 3):
+            #     maior = user
+            # if(count > 3):
+            #     if(user > maior):
+            #         maior = user
             a.append(user)
             count += 1
     count = 0
@@ -898,11 +898,11 @@ for c in range(0, 3):
                 somaPar += user
             if (count == 9):
                 tercCol += user
-            if (count == 3):
-                maior = user
-            if(count > 3):
-                if(user > maior):
-                    maior = user
+            # if (count == 3):
+            #     maior = user
+            # if(count > 3):
+            #     if(user > maior):
+            #         maior = user
             a.append(user)
             count += 1
 count = 0
@@ -928,3 +928,15 @@ print("A soma de todos os valores pares digitados foram: {}".format(somaPar))
 print("A soma de todos os valores da terceira coluna digitados foram: {}".format(tercCol))
 print("O maior valor digitado da segunda linha foi: {}".format(maior))'''
 
+# CHALLENGE 88
+
+'''from random import randint
+print("="*50)
+print("{: ^50}".format("Vamos jogar na Mega-Sena"))
+print("="*50)
+jogos = list()
+user = int(input("Quantos jogos você quer realizar ? "))
+for vezes in range(0, 6):
+    numeros = randint(1, 60)
+    jogos.append(numeros)
+print(jogos)'''
