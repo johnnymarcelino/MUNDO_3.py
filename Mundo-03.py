@@ -745,6 +745,8 @@ for p in galera:
 print(f"O total de maiores de idade é {totmaoir} e de menor é {totmenor}")'''
 
 # CHALLENGE 84
+# Faça um programa que leia nome e peso de várias pessoas, guardando tudo em uma lista. No final, mostre:
+# A) Quantas pessoas foram cadastradas, B) Uma listagem com as pessoas mais pesadas e C) Uma listagem com as pessoas mais leves.
 
 '''nome = list()
 dada = list()
@@ -790,7 +792,83 @@ print(f"They are: {nome}")
 print(f"The people who is the most heaviest is {heaviestLi}, with {heaviest}Kg!")
 print(f"The people who is the most lightest is {lightestLi}, with {lighter}Kg!")'''
 
+# //////////////////////////////////////////////////////////////////////////////////////
+
+# SOLUTION FROM GUANABARA
+
+'''temp = []
+princ = []
+mai = men = 0
+while True:
+    temp.append(str(input("Nome: ")))
+    temp.append(float(input("Peso: ")))
+    if(len(princ) == 0):
+        mai = men = temp[1]
+    else:
+        if(temp[1] > mai):
+            mai = temp[1]
+        if(temp[1] < men):
+            men = temp[1]
+    princ.append(temp[:])
+    temp.clear()
+    resp = str(input("Quer continuar? [S / N] "))
+    if(resp in "Nn"):
+        break
+print("-="*50)
+# print(f"Os dados foram {princ}")
+print(f"Ao todo, você cadastrou {len(princ)} pessoas")
+print(f"O menor peso foi de {men}Kg. Peso de ", end="")
+for p in princ:
+    if(p[1] == men):
+        print(f"[{p[0]}]", end=" ")
+print()
+print(f"O maior peso foi de {mai}Kg. Peso de: ", end=" ")
+for p in princ:
+    if(p[1] == mai):
+        print(f"[{p[0]}]", end=" ")'''
+
 # CHALLENGE 85
+# Crie um programa onde o usuário possa digitar sete valores numéricos e cadastre-os em uma lista única
+# que mantenha separados os valores pares e ímpares. No final, mostre os valores pares e ímpares em ordem crescente.
+
+'''numeros = [[], []]
+for c in range(1, 7+1):
+    user = int(input(f"Digite o {c}º valor: "))
+    if(user % 2 == 0):
+        numeros[0].append(user)
+    if(user % 2 == 1):
+        numeros[1].append(user)
+print("-=" * 50)
+numeros[0].sort()
+numeros[1].sort()
+# print(numeros)
+print(f"Os valore pare cadastrados são: {numeros[0]}")
+print(f"Os valores impares cadastrados são: {numeros[1]}")'''
+
+# ////////////////////////////////////////////////////////
+# ANOTHER SOLUTION
+
+'''lista_de_numeros = []
+for c in range(1, 8):
+    lista_de_numeros.append(int(input(f'Digite o {c}° valor: ')))
+lista_de_numeros.sort()
+print('-=' * 40)
+print(f'Os valores pares digitados foram: ', end='')
+for n in lista_de_numeros:
+    if n % 2 == 0:
+        print(f'{n} ', end='')
+print(f'\nOs valores impares digitados foram: ', end='')
+for n in lista_de_numeros:
+    if n % 2 != 0:
+        print(f'{n} ', end='')'''
+
+
+# for n in numeros:
+#     # if(n % 2 == 0):
+#     numeros.append([n[numeros]])
+#     if(n % 2 == 1):
+#         numeros.append([n][numeros])
+# print(numeros)
 
 '''val = list()
 evenAndOdd = list()
@@ -816,7 +894,9 @@ print(evenAndOdd)'''
 # print(evenAndOdd)
 # print(j)
 
-# CHALLENGE 86 - DONE
+# CHALLENGE 86
+# Crie um programa que declare uma matriz de dimensão 3×3 e preencha com valores lidos pelo teclado.
+# No final, mostre a matriz na tela, com a formatação correta.
 
 '''a = list()
 count = 0
@@ -853,7 +933,22 @@ for d in a:
         print("[ {} ]".format(d) , end="")
     count += 1'''
 
+# SOLUTION FROM GUANABARA
+
+'''matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+for l in range(0, 3):
+    for c in range(0, 3):
+        matriz[l][c] = int(input(f"Digite um valor para: [{l}, {c}]: "))
+print(matriz)
+for numero in matriz:
+    for numero1 in numero:
+        print(f"[{numero1:^5}]", end=" ")
+    print()'''
+
+
 # CHALLENGE 87
+# Aprimore o desafio anterior, mostrando no final.
+# A) A soma de todos os valores pares digitados. B) A soma dos valores da terceira coluna. C) O maior valor da segunda linha.
 
 '''a = list()
 count = 0
@@ -870,57 +965,57 @@ for c in range(0, 3):
                 tercCol += user
             if(c == 1):
                 maior = user
-            # if(count > 3):
+            if(count > 3):
                 if(user > maior):
                     maior = user
             a.append(user)
             count += 1
     count = 0
-    for y in range(3, 6):
-        if(count > 2 and count < 6):
-            user = int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y)))
-            if(user % 2 == 0):
-                somaPar += user
-            if(count == 5):
-                tercCol += user
-            # if(count == 3):
-            #     maior = user
-            # if(count > 3):
-            #     if(user > maior):
-            #         maior = user
-            a.append(user)
-            count += 1
-    count = 0
-    for z in range(7, 9):
-        if(count > 5 and count < 10):
-            user = int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y)))
-            if(user % 2 == 0):
-                somaPar += user
-            if (count == 9):
-                tercCol += user
-            # if (count == 3):
-            #     maior = user
-            # if(count > 3):
-            #     if(user > maior):
-            #         maior = user
-            a.append(user)
-            count += 1
+    # for y in range(3, 6):
+    #     if(count > 2 and count < 6):
+    #         user = int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y)))
+    #         if(user % 2 == 0):
+    #             somaPar += user
+    #         if(count == 5):
+    #             tercCol += user
+    #         if(count == 3):
+    #             maior = user
+    #         if(count > 3):
+    #             if(user > maior):
+    #                 maior = user
+    #         a.append(user)
+    #         count += 1
+    # count = 0
+    # for z in range(7, 9):
+    #     if(count > 5 and count < 10):
+    #         user = int(input("Digite o primeiro valor para [{}, {}]: ".format(count, y)))
+    #         if(user % 2 == 0):
+    #             somaPar += user
+    #         if (count == 9):
+    #             tercCol += user
+    #         if (count == 3):
+    #             maior = user
+    #         if(count > 3):
+    #             if(user > maior):
+    #                 maior = user
+    #         a.append(user)
+    #         count += 1
 count = 0
 for d in a:
     if(count < 3):
-        print("[ {} ]".format(d), end="")
+        print("[ {:^5} ]".format(d), end="")
     count += 1
 print()
 count = 0
 for d in a:
     if(count > 2 and count < 6):
-        print("[ {} ]".format(d) , end="")
+        print("[ {:^5} ]".format(d) , end="")
     count += 1
 print()
 count = 0
 for d in a:
     if(count > 5):
-        print("[ {} ]".format(d) , end="")
+        print("[ {:^5} ]".format(d) , end="")
     count += 1
 print()
 print("="*50)
