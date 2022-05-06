@@ -1024,14 +1024,36 @@ print("A soma de todos os valores da terceira coluna digitados foram: {}".format
 print("O maior valor digitado da segunda linha foi: {}".format(maior))'''
 
 # CHALLENGE 88
+# Faça um programa que ajude um jogador da MEGA SENA a criar palpites.
+# O programa vai perguntar quantos jogos serão gerados e vai sortear 6 números entre 1 e 60 para cada jogo,
+# cadastrando tudo em uma lista composta.
 
 '''from random import randint
+from time import sleep
+
 print("="*50)
-print("{: ^50}".format("Vamos jogar na Mega-Sena"))
+print("{:^50}".format("Vamos jogar na Mega-Sena"))
 print("="*50)
-jogos = list()
+jogos = []
 user = int(input("Quantos jogos você quer realizar ? "))
-for vezes in range(0, 6):
-    numeros = randint(1, 60)
-    jogos.append(numeros)
-print(jogos)'''
+count = 0
+gravados = []
+if(user == 1):
+    print("-="*5, "SORTEANDO {} JOGO".format(user), "-="*5)
+else:
+    print("-="*5, "SORTEANDO {} JOGOS".format(user), "-="*5)
+for jogadas in range(user):
+    for vezes in range(0, 6):
+        aleat = randint(1, 60)
+        while(aleat in jogos):
+            aleat = randint(1, 60)
+        jogos.insert(vezes, aleat)
+    count += 1
+    gravados.append(jogos[:])
+    sleep(1)
+    jogos.sort()
+    print(f"Jogo {jogadas+1}: {jogos}")
+    jogos.clear()
+print(f"{'-=<'*5} {'Boa Sorte!'} {'>-='*5}")
+# print(gravados)'''
+
