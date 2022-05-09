@@ -1057,3 +1057,33 @@ for jogadas in range(user):
 print(f"{'-=<'*5} {'Boa Sorte!'} {'>-='*5}")
 # print(gravados)'''
 
+# CHALLENGE 89
+# Crie um programa que leia nome e duas notas de vários alunos e guarde tudo em uma lista composta.
+# No final, mostre um boletim contendo a média de cada um e permita que o usuário possa mostrar as notas de cada aluno individualmente.
+
+alunos = []
+while True:
+    a = str(input("Nome: "))
+    n1 = float(input("Nota 1: "))
+    n2 = float(input("Nota 2: "))
+    media = (n1 + n2) / 2
+    alunos.append((a, n1, n2, media))
+    cp = str(input("Quer continuar [S / N] ? ")).strip().upper()
+    if(cp == "N"):
+        break
+print("-="*20)
+print(f"{'No'}  {'Nome':<10}{'Média':>10}")
+for index, grade in enumerate(alunos):
+    print(f'{index}  {alunos[index][0]:<10}{alunos[index][3]:>10.2f}')
+print("-"*20)
+while True:
+    mostrar = int(input("Mostrar a nota de qual alunos ? (999 interrompe): "))
+    if(mostrar == 999):
+        break
+    else:
+        if(mostrar == len(alunos)-1):
+            print(f"notas de {alunos[mostrar][0]}, são: [{alunos[mostrar][1]}], [{alunos[mostrar][2]}]")
+            print("-"*25)
+print("Processos finalizados!")
+print(alunos)
+
