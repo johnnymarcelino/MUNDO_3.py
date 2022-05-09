@@ -1061,7 +1061,7 @@ print(f"{'-=<'*5} {'Boa Sorte!'} {'>-='*5}")
 # Crie um programa que leia nome e duas notas de vários alunos e guarde tudo em uma lista composta.
 # No final, mostre um boletim contendo a média de cada um e permita que o usuário possa mostrar as notas de cada aluno individualmente.
 
-alunos = []
+'''alunos = []
 while True:
     a = str(input("Nome: "))
     n1 = float(input("Nota 1: "))
@@ -1085,5 +1085,5 @@ while True:
             print(f"notas de {alunos[mostrar][0]}, são: [{alunos[mostrar][1]}], [{alunos[mostrar][2]}]")
             print("-"*25)
 print("Processos finalizados!")
-print(alunos)
+print(alunos)'''
 
