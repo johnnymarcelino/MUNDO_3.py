@@ -1087,3 +1087,78 @@ while True:
 print("Processos finalizados!")
 print(alunos)'''
 
+# CLASS 19
+
+'''pessoas = {"nomes": "Johnny", "Sexo": "M", "Idade": 26}
+print(pessoas)
+print(pessoas["Idade"])
+print(pessoas["nomes"])
+print(pessoas["Sexo"])
+print(f"O {pessoas['nomes']} é do sexo {pessoas['Sexo']} com idade de {pessoas['Idade']}")
+print(f'O {pessoas["nomes"]} tem {pessoas["Idade"]} anos de idade e é do sexo {pessoas["Sexo"]}')
+print(pessoas.keys())
+print(pessoas.values())
+print(pessoas.items())
+print()
+print()
+for k in pessoas.keys():
+    print(k)
+print()
+for v in pessoas.values():
+    print(v)
+print()
+for items in pessoas.items():
+    print(items)
+print()
+print()
+for k, v in pessoas.items():
+    print(f'{k} = {v}')
+print()
+print()
+# del(pessoas["Sexo"])
+# print(pessoas)
+
+pessoas["nomes"] = "Gabriel"
+print(pessoas)
+
+pessoas["Peso"] = 68.5
+print(pessoas)
+print(pessoas["Peso"])
+for k, v in pessoas.items():
+    print(f'{k} = {v}')'''
+
+# //////////////////////////////////////////////////////////////////
+
+'''brasil = []
+estado1 = {"uf": "Rio de Janeiro", "Sigla": "RJ"}
+estado2 = {"uf": "São Paulo", "Sigla": "SP"}
+brasil.append(estado1)
+brasil.append(estado2)
+print(estado2)
+print(estado1)
+print(brasil)
+print(brasil[0])
+print(brasil[1])
+print(brasil[0]["Sigla"])
+print(brasil[0]["uf"])
+print(brasil[1]["uf"])'''
+
+'''estado = dict()
+brasil = list()
+for c in range(0, 3):
+    estado["uf"] = str(input("Unidade Federativa: "))
+    estado["Sigla"] = str(input("Sigla do Estado: "))
+    brasil.append(estado.copy())
+print(brasil)
+# for k in brasil:
+#     print(k)
+# for k, v in brasil:
+#     print(f'A {k} é {v}')
+
+for e in brasil:
+    # for v in e.values():
+    #     print(f'{v}', end=" ")
+    # print()
+    for k, v in e.items():
+        print(f'O campo {k} tem valor {v}')'''
+
