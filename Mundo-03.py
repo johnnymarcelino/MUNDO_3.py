@@ -1089,43 +1089,43 @@ print(alunos)'''
 
 # CLASS 19
 
-'''pessoas = {"nomes": "Johnny", "Sexo": "M", "Idade": 26}
-print(pessoas)
-print(pessoas["Idade"])
-print(pessoas["nomes"])
-print(pessoas["Sexo"])
-print(f"O {pessoas['nomes']} é do sexo {pessoas['Sexo']} com idade de {pessoas['Idade']}")
-print(f'O {pessoas["nomes"]} tem {pessoas["Idade"]} anos de idade e é do sexo {pessoas["Sexo"]}')
-print(pessoas.keys())
-print(pessoas.values())
-print(pessoas.items())
-print()
-print()
-for k in pessoas.keys():
-    print(k)
-print()
-for v in pessoas.values():
-    print(v)
-print()
-for items in pessoas.items():
-    print(items)
-print()
-print()
-for k, v in pessoas.items():
-    print(f'{k} = {v}')
-print()
-print()
-# del(pessoas["Sexo"])
+# pessoas = {"nomes": "Johnny", "Sexo": "M", "Idade": 26}
 # print(pessoas)
-
-pessoas["nomes"] = "Gabriel"
-print(pessoas)
-
-pessoas["Peso"] = 68.5
-print(pessoas)
-print(pessoas["Peso"])
-for k, v in pessoas.items():
-    print(f'{k} = {v}')'''
+# print(pessoas["Idade"])
+# print(pessoas["nomes"])
+# print(pessoas["Sexo"])
+# print(f"O {pessoas['nomes']} é do sexo {pessoas['Sexo']} com idade de {pessoas['Idade']}")
+# print(f'O {pessoas["nomes"]} tem {pessoas["Idade"]} anos de idade e é do sexo {pessoas["Sexo"]}')
+# print(pessoas.keys())
+# print(pessoas.values())
+# print(pessoas.items())
+# print()
+# print()
+# for k in pessoas.keys():
+#     print(k)
+# print()
+# for v in pessoas.values():
+#     print(v)
+# print()
+# for items in pessoas.items():
+#     print(items)
+# print()
+# print()
+# for k, v in pessoas.items():
+#     print(f'{k} = {v}')
+# print()
+# print()
+# # del(pessoas["Sexo"])
+# # print(pessoas)
+#
+# pessoas["nomes"] = "Gabriel"
+# print(pessoas)
+#
+# pessoas["Peso"] = 68.5
+# print(pessoas)
+# print(pessoas["Peso"])
+# for k, v in pessoas.items():
+#     print(f'{k} = {v}')
 
 # //////////////////////////////////////////////////////////////////
 
@@ -1149,16 +1149,32 @@ for c in range(0, 3):
     estado["uf"] = str(input("Unidade Federativa: "))
     estado["Sigla"] = str(input("Sigla do Estado: "))
     brasil.append(estado.copy())
-print(brasil)
+print(brasil)'''
 # for k in brasil:
 #     print(k)
 # for k, v in brasil:
 #     print(f'A {k} é {v}')
 
-for e in brasil:
-    # for v in e.values():
-    #     print(f'{v}', end=" ")
-    # print()
-    for k, v in e.items():
-        print(f'O campo {k} tem valor {v}')'''
+'''for e in brasil:
+    for v in e.values():
+        print(f'{v}', end=" ")
+    # if(len(brasil) < len(brasil)):
+    print("-> ", end="")
+    # for k, v in e.items():
+    #     print(f'O campo {k} tem valor {v}')'''
 
+# CHALLENGE 90
+
+notaFinal = {}
+while True:
+    notaFinal['name'] = str(input("What is your name ? "))
+    notaFinal['media'] = float(input("What is your media grade in school ? "))
+    print(f"Name is {notaFinal['name']}")
+    print(f"Media is {notaFinal['media']}")
+    if(notaFinal['media'] >= 7):
+        # print(f"{notaFinal['name']} you were approved in the test, cause your media grade was {notaFinal['media']}!")
+        print(f"Situation is equal APPROVED!")
+    else:
+        # print(f"{notaFinal['name']} you were not approved in the test, cause your media grade was {notaFinal['media']:.1f}!")
+        print(f"Situation is equal FAILED!")
+    break
