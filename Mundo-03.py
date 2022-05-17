@@ -8,6 +8,7 @@
 '''for count in range(0, len(lanche)):
     print(f"Vou comer {lanche[count]} na posição {count}")
 print("Comi pra caramba")'''
+import random
 
 '''for comida in lanche:
     print(f"Vou comer {comida}")
@@ -1165,16 +1166,51 @@ print(brasil)'''
 
 # CHALLENGE 90
 
-notaFinal = {}
-while True:
-    notaFinal['name'] = str(input("What is your name ? "))
-    notaFinal['media'] = float(input("What is your media grade in school ? "))
-    print(f"Name is {notaFinal['name']}")
-    print(f"Media is {notaFinal['media']}")
-    if(notaFinal['media'] >= 7):
-        # print(f"{notaFinal['name']} you were approved in the test, cause your media grade was {notaFinal['media']}!")
-        print(f"Situation is equal APPROVED!")
+# notaFinal = {}
+# while True:
+#     notaFinal['name'] = str(input("What is your name ? "))
+#     notaFinal['media'] = float(input("What is your media grade in school ? "))
+#     print(f"Name is {notaFinal['name']}")
+#     print(f"Media is {notaFinal['media']}")
+#     if(notaFinal['media'] >= 7):
+#         # print(f"{notaFinal['name']} you were approved in the test, cause your media grade was {notaFinal['media']}!")
+#         print(f"Situation is equal APPROVED!")
+#     else:
+#         # print(f"{notaFinal['name']} you were not approved in the test, cause your media grade was {notaFinal['media']:.1f}!")
+#         print(f"Situation is equal FAILED!")
+#     break
+
+# phonebook = {"John": 938477566, "Jack": 938377264, "Jill": 947662781}
+# for name, number in phonebook.items():
+#     print("Phone number of %s is %d" % (name, number))
+
+# CHALLENGE 91
+
+from random import randint
+
+count = 1
+greater = 0
+less = 0
+player = {}
+# while(count < 4):
+for x in range(1, 5):
+    number = int(input(f"Player {count}, enter here with the number '1' to play the data: "))
+    data = randint(1, 6)
+    player[f'player {count}'] = {data}
+    while(number != 1):
+        player = int(input(f"Player {count}, enter here with the number '1' to play the data!: "))
+    if(count == 1):
+        greater = data
+        less = data
     else:
-        # print(f"{notaFinal['name']} you were not approved in the test, cause your media grade was {notaFinal['media']:.1f}!")
-        print(f"Situation is equal FAILED!")
-    break
+        if(data > greater):
+            greater = data
+        if(data < less):
+            less = data
+    # player[f"player {count}"] = dict(data)
+    print(f'player {count} have played')
+    print(f'Number of the player {count} was {data}!')
+    count += 1
+print(player)
+# data = randint(1, 6)
+# player =
