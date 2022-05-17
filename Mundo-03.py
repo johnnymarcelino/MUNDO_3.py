@@ -1186,31 +1186,63 @@ print(brasil)'''
 
 # CHALLENGE 91
 
-from random import randint
+'''from random import randint
+from time import sleep
 
 count = 1
-greater = 0
-less = 0
+# greater = 0
+# less = 0
 player = {}
 # while(count < 4):
+print("DRAWN NUMBERS")
 for x in range(1, 5):
-    number = int(input(f"Player {count}, enter here with the number '1' to play the data: "))
+    # number = int(input(f"Player {count}, enter here with the number '1' to play the data: "))
     data = randint(1, 6)
-    player[f'player {count}'] = {data}
-    while(number != 1):
-        player = int(input(f"Player {count}, enter here with the number '1' to play the data!: "))
-    if(count == 1):
-        greater = data
-        less = data
-    else:
-        if(data > greater):
-            greater = data
-        if(data < less):
-            less = data
+    player[f'player{count}'] = data
+    # while(number != 1):
+    #     player = int(input(f"Player {count}, enter here with the number '1' to play the data!: "))
+    # if(count == 1):
+    #     greater = data
+    #     less = data
+    # else:
+    #     if(data > greater):
+    #         greater = data
+    #     if(data < less):
+    #         less = data
     # player[f"player {count}"] = dict(data)
-    print(f'player {count} have played')
-    print(f'Number of the player {count} was {data}!')
+    print(" "*3, f'player{count} have got {data}')
+    sleep(1)
+    # print(f'Number of the player {count} was {data}!')
     count += 1
-print(player)
+print()
+sorted(player.values())
+print("PLAYERS RANKING")
+# for big in player.values():
+#     if(count == 4):
+#         player["player1"] = big
+#     else:
+#         for cmp in player.values():
+#             if()
+#         if(big > player):
+
+count = 1
+# for ply, value in player.items():
+#     print(" "*3, f"{count}º position: {ply} with {value}")
+#     count += 1
+#     sleep(1)
+
+for i, v in sorted(player.items()):
+    print(" "*3, f"{i} with {v}")
+
+
+# print(player)
+# print()
+# playerList = list(player)
+# playerList.sort()
+# print(playerList)
+# print()
+# playerDic = dict(playerList)
+# print(playerDic)
 # data = randint(1, 6)
-# player =
+# player ='''
+
