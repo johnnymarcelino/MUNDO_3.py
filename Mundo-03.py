@@ -1246,3 +1246,5 @@ for i, v in sorted(player.items()):
 # data = randint(1, 6)
 # player ='''
 
+# CHALLENGE 92
+
