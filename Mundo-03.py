@@ -1274,6 +1274,39 @@ print(employee)'''
 
 # CHALLENGE 93
 
+'''play_better = {}
 
-play_better = {}
-
+play_better["name"] = str(input("Name: "))
+match = int(input(f"How many match {play_better['name']} have played: "))
+count = 0
+lista = []
+# play_better["goals"] = {}
+for g in range(match):
+    lista.append(int(input(f"How many goals did {play_better['name']} score in match {g+1}: ")))
+    count += lista[g]
+    # play_better["goals"] = list[int(input(f"How many goals did {play_better['name']} score in match {g}: "))]
+    # play_better["totalGoals"] = play_better["goals"].copy()
+# play_better["goals"] = int(input(f"How many goals did you score in {play_better['match']} match: "))
+# play_better["performance"] = play_better["match"] / count
+# print("Your performance is {:.2f} per match!".format(play_better["performance"]))
+print("=-="*20)
+play_better["goals"] = lista
+play_better["total"] = count
+# print(count)
+# print()
+print(play_better)
+print("=-="*20)
+for k, v in play_better.items():
+    print(f"The field {k} has the value {v}")
+print("=-="*20)
+# print(f"Your name is {play_better['name']}")
+print(f"Player {play_better['name']} played {match} matches")
+# print()
+c = 1
+for each, goal in play_better.items():
+    if(each == "goals"):
+        for a in goal:
+            print(" "*2, "=> " f'In the match {c}, scored {a}')
+            c += 1
+print(f"It is a total of {play_better['total']} goals")
+# for k, v in play_better.items():'''
