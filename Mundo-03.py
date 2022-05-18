@@ -1248,3 +1248,27 @@ for i, v in sorted(player.items()):
 
 # CHALLENGE 92
 
+'''employee = {}
+employee["name"] = str(input("What is your name ? "))
+employee["age"] = int(input("Which year do you born ? "))
+employee["spjc"] = int(input("What is the number of your work card ? [0] In case not have "))
+employee["age"] = 2022 - employee["age"]
+if(employee["spjc"] == 0):
+    print("=-=" * 15)
+    print(f"Your name is {employee['name']}!")
+    print(f"You are {employee['age']} years old!")
+    print(f"The number of your job card is {employee['spjc']}")
+else:
+    employee["started"] = int(input("Which year do you started in the first company ? "))
+    employee["salary"] = float(input("What is your salary currently ? "))
+    employee["retire"] = (35 - (2022 - employee["started"])) + employee["age"]
+    print("=-=" * 15)
+    print(f"Your name is {employee['name']}!")
+    print(f"You are {employee['age']} years old!")
+    print(f"The number of your job card is {employee['spjc']}")
+    print(f"Your currently salary is {employee['salary']}")
+    print(f"Your fist work was in {employee['started']}")
+    print(f"Therefore you will retire when you are {employee['retire']}")
+print("=-="*15)
+print(employee)'''
+
