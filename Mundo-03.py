@@ -1311,3 +1311,4 @@ for each, goal in play_better.items():
 print(f"It is a total of {play_better['total']} goals")
 # for k, v in play_better.items():'''
 
+# CHALLENGE 94
