@@ -1312,3 +1312,41 @@ print(f"It is a total of {play_better['total']} goals")
 # for k, v in play_better.items():'''
 
 # CHALLENGE 94
+
+'''data = []
+pep = {}
+sum = 0
+count = 0
+while True:
+    pep["name"] = str(input("What is your name: "))
+    pep["sex"] = str(input("Which sex do you think to attribute better you [M / F]: ")).strip().upper()[0]
+    pep["age"] = int(input("How old are you: "))
+    sum += pep["age"]
+    if(pep["sex"] == "F"):
+        count += 1
+    data.append(pep.copy())
+    cb = str(input("Do you want continue [Y / N]: ")).strip()[0]
+    if(cb in "Nn"):
+        break
+# print(data)
+print("=-="*30)
+print(f"- Total of people registry were: {len(data)}")
+print(f"- The average of group age is: {sum / len(data)}")
+
+if(count > 0):
+    print(f"- Women registries are: ", end="")
+count = 0
+for item in data:
+    for w, m in item.items():
+        if(m == "F"):
+            print(f"{item['name']}", end=", ")
+            count += 1
+print()
+if(count > 0):
+    print(f"- Total of women registry were: {count} ")
+print(f"- People above average are: ", end="")
+for age in data:
+    for per, ave in age.items():
+        if(per == "age"):
+            if(ave > (sum/len(data))):
+                print(f"{age['name']}, who is {ave}", end=", ")'''
