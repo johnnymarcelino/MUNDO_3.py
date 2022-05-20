@@ -1193,6 +1193,9 @@ print(notaFinal)'''
 #     print("Phone number of %s is %d" % (name, number))
 
 # CHALLENGE 91 - COMPLETED
+# Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios.
+# Guarde esses resultados em um dicionário em Python.
+# No final, coloque esse dicionário em ordem, sabendo que o vencedor tirou o maior número no dado.
 
 '''from random import randint
 from time import sleep
@@ -1261,42 +1264,49 @@ for i, v in enumerate(ranking):
 # player =
 
 # CHALLENGE 92
+# Crie um programa que leia nome, ano de nascimento e carteira de trabalho e cadastre-o (com idade) em um dicionário.
+# Se por acaso a CTPS for diferente de ZERO, o dicionário receberá também o ano de contratação e o salário.
+# Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar.
 
-'''employee = {}
+'''from datetime import datetime
+employee = {}
 employee["name"] = str(input("What is your name ? "))
 employee["age"] = int(input("Which year do you born ? "))
 employee["spjc"] = int(input("What is the number of your work card ? [0] In case not have "))
-employee["age"] = 2022 - employee["age"]
+employee["age"] = datetime.now().year - employee["age"]
 if(employee["spjc"] == 0):
     print("=-=" * 15)
-    print(f"Your name is {employee['name']}!")
-    print(f"You are {employee['age']} years old!")
-    print(f"The number of your job card is {employee['spjc']}")
+    print(f" - Your name is {employee['name']}!")
+    print(f" - You are {employee['age']} years old!")
+    print(f" - The number of your job card is {employee['spjc']}")
 else:
     employee["started"] = int(input("Which year do you started in the first company ? "))
     employee["salary"] = float(input("What is your salary currently ? "))
-    employee["retire"] = (35 - (2022 - employee["started"])) + employee["age"]
+    employee["wlRetire"] = (35 - (datetime.now().year - employee["started"])) + employee["age"]
     print("=-=" * 15)
-    print(f"Your name is {employee['name']}!")
-    print(f"You are {employee['age']} years old!")
-    print(f"The number of your job card is {employee['spjc']}")
-    print(f"Your currently salary is {employee['salary']}")
-    print(f"Your fist work was in {employee['started']}")
-    print(f"Therefore you will retire when you are {employee['retire']}")
+    print(f"  - Your name is {employee['name']}!")
+    print(f"  - You are {employee['age']} years old!")
+    print(f"  - The number of your job card is {employee['spjc']}")
+    print(f"  - Your currently salary is {employee['salary']}")
+    print(f"  - Your fist work was in {employee['started']}")
+    print(f"  - Therefore you will retire when you are {employee['wlRetire']}")
 print("=-="*15)
 print(employee)'''
 
 # CHALLENGE 93
+# Crie um programa que gerencie o aproveitamento de um jogador de futebol.
+# O programa vai ler o nome do jogador e quantas partidas ele jogou. Depois vai ler a quantidade de gols feitos em cada partida.
+# No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.
+
 
 '''play_better = {}
-
 play_better["name"] = str(input("Name: "))
 match = int(input(f"How many match {play_better['name']} have played: "))
 count = 0
-lista = []
+lista = []  # Matches does
 # play_better["goals"] = {}
 for g in range(match):
-    lista.append(int(input(f"How many goals did {play_better['name']} score in match {g+1}: ")))
+    lista.append(int(input(f"   How many goals did {play_better['name']} score in match {g+1}: ")))
     count += lista[g]
     # play_better["goals"] = list[int(input(f"How many goals did {play_better['name']} score in match {g}: "))]
     # play_better["totalGoals"] = play_better["goals"].copy()
@@ -1314,7 +1324,7 @@ for k, v in play_better.items():
     print(f"The field {k} has the value {v}")
 print("=-="*20)
 # print(f"Your name is {play_better['name']}")
-print(f"Player {play_better['name']} played {match} matches")
+print(f"Player {play_better['name']} played {len(play_better['goals'])} matches")
 # print()
 c = 1
 for each, goal in play_better.items():
@@ -1326,6 +1336,10 @@ print(f"It is a total of {play_better['total']} goals")
 # for k, v in play_better.items():'''
 
 # CHALLENGE 94
+# Crie um programa que leia nome, sexo e idade de várias pessoas,
+# guardando os dados de cada pessoa em um dicionário e todos os dicionários em uma lista.
+# No final, mostre: A) Quantas pessoas foram cadastradas B) A média de idade
+# C) Uma lista com as mulheres D) Uma lista de pessoas com idade acima da média
 
 '''data = []
 pep = {}
@@ -1334,6 +1348,9 @@ count = 0
 while True:
     pep["name"] = str(input("What is your name: "))
     pep["sex"] = str(input("Which sex do you think to attribute better you [M / F]: ")).strip().upper()[0]
+    while(pep["sex"] not in "MF"):
+        print("ERROR! Please, type only 'M' or 'F'")
+        pep["sex"] = str(input("Which sex do you think to attribute better you [M / F]: ")).strip().upper()[0]
     pep["age"] = int(input("How old are you: "))
     sum += pep["age"]
     if(pep["sex"] == "F"):
@@ -1342,13 +1359,16 @@ while True:
     cb = str(input("Do you want continue [Y / N]: ")).strip()[0]
     if(cb in "Nn"):
         break
+    while(cb not in "YyNn"):
+        print("ERROR! Answer just 'Y' or 'N'")
+        cb = str(input("Do you want continue [Y / N]: ")).strip()[0]
 # print(data)
 print("=-="*30)
-print(f"- Total of people registry were: {len(data)}")
-print(f"- The average of group age is: {sum / len(data)}")
+print(f"A) Total of people registry were: {len(data)}")
+print(f"B) The average of group age is: {sum / len(data):5.2f}")
 
 if(count > 0):
-    print(f"- Women registries are: ", end="")
+    print(f"C) Women registries are: ", end="")
 count = 0
 for item in data:
     for w, m in item.items():
@@ -1357,16 +1377,22 @@ for item in data:
             count += 1
 print()
 if(count > 0):
-    print(f"- Total of women registry were: {count} ")
-print(f"- People above average are: ", end="")
+    print(f"D) Total of women registry were: {count} ")
+print(f"E) People above average are: ")
 for age in data:
     for per, ave in age.items():
+        if(per == "sex"):
+            a = per
         if(per == "age"):
             if(ave > (sum/len(data))):
-                print(f"{age['name']}, who is {ave}", end=", ")'''
-
+                print(f" -{age['name']}, who is {ave} in {a}: {age['sex']}")  # GAMBIARRA HAHA - ASSIM É LÓGICA -> age.keys()
+print()
+print("====== PROGRAM FINISHED! ========")
+# print(data)'''
 
 # CHALLENGE 95
+# Aprimore o desafio 93 para que ele funcione com vários jogadores,
+# incluindo um sistema de visualização de detalhes do aproveitamento de cada jogador.
 
 '''count = 0
 sum = 0
@@ -1398,14 +1424,14 @@ print("-"*60)
 c1 = 0
 # print(lista)
 for pl in lista:
-    print(f"{c1}{pl['name']:>8}{pl['match']:>10}{' ':>10}{pl['goals']}", f"{pl['total']:>10}")
+    print(f"{c1} {pl['name']:>10}{pl['match']:>10}{' ':>10}{pl['goals']}", f"{pl['total']:>10}")
     c1 += 1
 print("-"*60)
 while True:
     data = int(input("Witch data's player would you like to display, [999] to stop: "))
     if(data == 999):
         break
-    if(data > len(lista)):
+    if(data >= len(lista)):
         print(f"ERRO! There is not player in code {data}! Try again")
         print("-" * 60)
     else:
@@ -1419,6 +1445,7 @@ while True:
                             print(f"{'-':>3} In the match {matches+1}, scored {lista[data]['goals'][matches]}")
                 break
 print("COME BACK ALWAYS!!!")'''
+
 # print(lista)
 # print(play_better)
 # print(goals)
