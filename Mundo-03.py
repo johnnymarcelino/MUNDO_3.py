@@ -1165,26 +1165,34 @@ print(brasil)'''
     #     print(f'O campo {k} tem valor {v}')'''
 
 # CHALLENGE 90
+# Faça um programa que leia nome e média de um aluno, guardando também a situação em um dicionário.
+# No final, mostre o conteúdo da estrutura na tela.
 
-# notaFinal = {}
-# while True:
-#     notaFinal['name'] = str(input("What is your name ? "))
-#     notaFinal['media'] = float(input("What is your media grade in school ? "))
-#     print(f"Name is {notaFinal['name']}")
-#     print(f"Media is {notaFinal['media']}")
-#     if(notaFinal['media'] >= 7):
-#         # print(f"{notaFinal['name']} you were approved in the test, cause your media grade was {notaFinal['media']}!")
-#         print(f"Situation is equal APPROVED!")
-#     else:
-#         # print(f"{notaFinal['name']} you were not approved in the test, cause your media grade was {notaFinal['media']:.1f}!")
-#         print(f"Situation is equal FAILED!")
-#     break
+'''notaFinal = {}
+while True:
+    notaFinal['name'] = str(input("What is your name ? "))
+    notaFinal['media'] = float(input("What is your media grade in school ? "))
+    print(f"Name is {notaFinal['name']}")
+    print(f"Media is {notaFinal['media']}")
+    if(notaFinal['media'] >= 7):
+        # print(f"{notaFinal['name']} you were approved in the test, cause your media grade was {notaFinal['media']}!")
+        notaFinal['situation'] = 'APPROVED'
+        print(f"Situation is equal APPROVED!")
+    else:
+        if(notaFinal['media'] < 7 and notaFinal['media'] >= 5):
+            notaFinal['situation'] = 'IN RECUPERATION'
+            print(f"Situation is equal IN RECUPERATION!")
+        if(notaFinal['media'] < 5):
+            notaFinal['situation'] = 'REPROVED'
+            print(f"Situation is equal REPROVED!")
+    break
+print(notaFinal)'''
 
 # phonebook = {"John": 938477566, "Jack": 938377264, "Jill": 947662781}
 # for name, number in phonebook.items():
 #     print("Phone number of %s is %d" % (name, number))
 
-# CHALLENGE 91 - UNCOMPLETED
+# CHALLENGE 91 -
 
 '''from random import randint
 from time import sleep
@@ -1215,8 +1223,10 @@ for x in range(1, 5):
     # print(f'Number of the player {count} was {data}!')
     count += 1
 print()
-sorted(player.values())
-print("PLAYERS RANKING")
+from operator import itemgetter
+ranking = list()
+ranking = sorted(player.items(), key=itemgetter(1), reverse=True)
+# print("PLAYERS RANKING")
 # for big in player.values():
 #     if(count == 4):
 #         player["player1"] = big
@@ -1231,8 +1241,12 @@ count = 1
 #     count += 1
 #     sleep(1)
 
-for i, v in sorted(player.items()):
-    print(" "*3, f"{i} with {v}")
+# for i, v in sorted(player.items()):
+#     print(" "*3, f"{i} with {v}")
+print("   == RANKING OF THE PLAYERS ==")
+for i, v in enumerate(ranking):
+    print(" "*3, f"{i+1}º place: {v[0]} with {v[1]}.")
+    sleep(1)'''
 
 
 # print(player)
@@ -1244,7 +1258,7 @@ for i, v in sorted(player.items()):
 # playerDic = dict(playerList)
 # print(playerDic)
 # data = randint(1, 6)
-# player ='''
+# player =
 
 # CHALLENGE 92
 
@@ -1354,39 +1368,58 @@ for age in data:
 
 # CHALLENGE 95
 
-'''play_better = {}
-
-play_better["name"] = str(input("Name: "))
-match = int(input(f"How many match {play_better['name']} have played: "))
-count = 0
+'''count = 0
+sum = 0
 lista = []
-# play_better["goals"] = {}
-for g in range(match):
-    lista.append(int(input(f"How many goals did {play_better['name']} score in match {g+1}: ")))
-    count += lista[g]
-    # play_better["goals"] = list[int(input(f"How many goals did {play_better['name']} score in match {g}: "))]
-    # play_better["totalGoals"] = play_better["goals"].copy()
-# play_better["goals"] = int(input(f"How many goals did you score in {play_better['match']} match: "))
-# play_better["performance"] = play_better["match"] / count
-# print("Your performance is {:.2f} per match!".format(play_better["performance"]))
+goals = []
+play_better = {}
+gp = 0
+while True:
+    play_better["name"] = str(input("Name: "))
+    play_better["match"] = int(input(f"How many match {play_better['name']} have played: "))
+    for cada, valor in play_better.items():
+        if(cada == "match"):
+            for g in range(valor):
+                goals.append(int(input(f"How many goals did {play_better['name']} score in match {g+1}: ")))
+                count += goals[g]
+    play_better["goals"] = goals[:]
+    play_better["total"] = count
+    # lista.append(goals)
+    lista.append(play_better.copy())
+    cb = str(input("Do you want to continue [Y / N]: ")).strip().upper()[0]
+    goals.clear()
+    count = 0
+    if("N" in cb):
+        break
+# print(lista)
 print("=-="*20)
-play_better["goals"] = lista
-play_better["total"] = count
+print(f"cod name{'match':>13}{'goals':>13}{'total':>16}")
+print("-"*60)
+c1 = 0
+# print(lista)
+for pl in lista:
+    print(f"{c1}{pl['name']:>8}{pl['match']:>10}{' ':>10}{pl['goals']}", f"{pl['total']:>10}")
+    c1 += 1
+print("-"*60)
+while True:
+    data = int(input("Witch data's player would you like to display, [999] to stop: "))
+    if(data == 999):
+        break
+    if(data > len(lista)):
+        print(f"ERRO! There is not player in code {data}! Try again")
+        print("-" * 60)
+    else:
+        print(f"{'--':>2} statistic of player {lista[data]['name']}")
+        for qunt in range(len(lista)):
+            if(data == qunt):
+                # for dtpy in lista[data]:
+                for x, y in lista[data].items():
+                    if(x == "match"):
+                        for matches in range(0, y):
+                            print(f"{'-':>3} In the match {matches+1}, scored {lista[data]['goals'][matches]}")
+                break
+print("COME BACK ALWAYS!!!")'''
+# print(lista)
+# print(play_better)
+# print(goals)
 # print(count)
-# print()
-print(play_better)
-print("=-="*20)
-for k, v in play_better.items():
-    print(f"The field {k} has the value {v}")
-print("=-="*20)
-# print(f"Your name is {play_better['name']}")
-print(f"Player {play_better['name']} played {match} matches")
-# print()
-c = 1
-for each, goal in play_better.items():
-    if(each == "goals"):
-        for a in goal:
-            print(" "*2, "=> " f'In the match {c}, scored {a}')
-            c += 1
-print(f"It is a total of {play_better['total']} goals")
-# for k, v in play_better.items():'''
