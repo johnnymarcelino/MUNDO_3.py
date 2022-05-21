@@ -1528,3 +1528,16 @@ def area(l, c):
 
 
 area(float(input("LENGTH (m): ")), float(input("WIDTH (m): ")))'''
+
+# CHALLENGE 97
+
+'''def escreva(txt):
+    print("-"*len(txt))
+    print(txt)
+    print("-"*len(txt))
+
+
+escreva(str(input("Type any text: ")))
+escreva(str(input("Type any text: ")))
+escreva(str(input("Type any text: ")))'''
+
