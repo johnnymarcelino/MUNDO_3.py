@@ -1521,11 +1521,10 @@ print(valores)'''
 
 # CHALLENGE 95
 
-
-print("  Controle de Terrenos ")
+'''print("  Controle de Terrenos ")
 print("-"*20)
 def area(l, c):
     print(f"The area of a land {l}x{c} is {l*c:5.2f}m².")
 
 
-area(float(input("LENGTH (m): ")), float(input("WIDTH (m): ")))
+area(float(input("LENGTH (m): ")), float(input("WIDTH (m): ")))'''
