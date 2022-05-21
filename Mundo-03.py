@@ -1455,13 +1455,67 @@ print("COME BACK ALWAYS!!!")'''
 # CLASS 20
 
 
-def titulo(txt):
-    print("-" * 30)
-    titulo(txt)
-    print("-" * 30)
+# def titulo(txt):
+#     print("-"*30)
+#     print(txt)
+#     print("-"*30)
+#
+#
+# # main program
+# titulo("    Curso em Video   ")
+# titulo("     Olá python   ")
 
 
-# main program
-titulo("Curso em Video")
-titulo("Curso em Video")
-titulo("Johnny marcelino")
+'''
+a = 4
+b = 5
+s = a + b
+print(s)
+a = 8
+b = 9
+s = a + b
+print(s)
+a = 2
+b = 1
+s = a + b
+print(s)'''
+
+'''def soma(a, b):
+    print(f"A = {a} e B = {b}")
+    s = a + b
+    print(f"A soma de A + B = {s}")
+
+
+soma(a=4, b=5)
+soma(7, 9)
+# soma(5, 8)
+# soma(5, 8, 2)  # ERROR, get three parament  
+# soma(a=4, b=2)'''
+
+'''def contador(*num):
+    # print(*num)
+    # print(type(num))
+    # print(type(*num))
+    # for valor in num:
+    #     print(f"{valor},", end=" ")
+    # print("FIM")
+    tam = len(num)
+    print(f"Recebi os valores {num} e são ao todo {tam} números")
+
+
+contador(4, 8, 4, 5)
+contador(4, 8)
+contador(4, 8, 5)'''
+
+'''def dobra(lst):
+    pos = 0
+    while pos < len(lst):
+        lst[pos] *= 2
+        print(lst[pos])
+        pos += 1
+
+
+valores = list((1, 4, 5, 2, 7))
+dobra(valores)
+print(valores)'''
+
