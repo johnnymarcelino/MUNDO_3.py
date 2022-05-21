@@ -1450,3 +1450,18 @@ print("COME BACK ALWAYS!!!")'''
 # print(play_better)
 # print(goals)
 # print(count)
+
+
+# CLASS 20
+
+
+def titulo(txt):
+    print("-" * 30)
+    titulo(txt)
+    print("-" * 30)
+
+
+# main program
+titulo("Curso em Video")
+titulo("Curso em Video")
+titulo("Johnny marcelino")
