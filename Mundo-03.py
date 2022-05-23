@@ -1696,3 +1696,5 @@ def sumpair():
 
 sumpair()'''
 
+# CLASS 21
+
