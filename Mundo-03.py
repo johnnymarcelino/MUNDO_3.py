@@ -1541,3 +1541,75 @@ escreva(str(input("Type any text: ")))
 escreva(str(input("Type any text: ")))
 escreva(str(input("Type any text: ")))'''
 
+# CHALLENGE 98
+
+'''from time import sleep
+def contador(s, e, p):
+    a = 0
+    if(p == 0):
+        print(f"Count from {s} to {e} from {p+1} to {p+1}!")
+        if(s > e):
+            for x in range(s, e-1, -1):
+                print(x, end=" ")
+                sleep(0.1)
+                a += 3
+            print("END")
+            print("="*a)
+        elif(s < e):
+            # print("Now it is your time to personalize the count!")
+            print(f"Count from {s} to {e} from {p + 1} to {p + 1}!")
+            for x in range(s, e+1, 1):
+                print(x, end=" ")
+                sleep(.1)
+                a += 3
+            print("END")
+            print("=" * a)
+        # elif(s > e):
+        #     for x in range(s, e - 1, -p):
+        #         print(x, end=" ")
+        #         sleep(.1)
+        #         a += 3
+        #     print("END")
+        #     print("=" * a)
+        # else:
+        #     for x in range(s, e + 1, p):
+        #         print(x, end=" ")
+        #         sleep(.1)
+        #         a += 3
+        #     print("END")
+        #     print("=" * a)
+    else:
+        if(s > e and p < 0):
+            # print("Now it is your time to personalize the count!")
+            print(f"Count from {s} to {e} from {1} to {1}!")
+            for x in range(s, e - 1, p):
+                print(x, end=" ")
+                sleep(.1)
+                a += 3
+            print("END")
+            print("=" * a)
+        elif(s > e):
+            # print("Now it is your time to personalize the count!")
+            print(f"Count from {s} to {e} from {p} to {p}!")
+            for x in range(s, e-1, -p):
+                print(x, end=" ")
+                sleep(.1)
+                a += 3
+            print("END")
+            print("=" * a)
+        # else:
+            # print("Now it is your time to personalize the count!")
+            # print(f"Count from {s} to {e} from {p} to {p}!")
+            # for x in range(s, e+1, p):
+            #     print(x, end=" ")
+            #     sleep(.1)
+            #     a += 3
+            # print("END")
+            # print("=" * a)
+
+
+contador(1, 10, 1)
+contador(10, 1, 2)
+print("Now it is your time to personalize the count!")
+contador(int(input("Start at: ")), int(input("End at: ")), int(input("Pass: ")))'''
+
