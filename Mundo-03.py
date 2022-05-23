@@ -1648,3 +1648,30 @@ bigger()'''
 
 # CHALLENGE 100
 
+'''from random import randint
+from time import sleep
+numbers = []
+def drawn():
+    print("Drawn 5 values ", end="")
+    for num in range(5):
+        numbers.append(randint(0, 10))
+        # print(f"{numbers}")
+        # for x in numbers:
+        print(f"{numbers[num]} ", end="")
+        sleep(0.4)
+
+
+drawn()
+print("Done!")
+# print(f"The drawn numbers was: {numbers}!")
+def sumpair():
+    print(f"The drawn numbers was {numbers}")
+    sum = 0
+    for par in numbers:
+        if(par % 2 == 0):
+            sum += par
+    print(f"So, The sum total between pairs numbers was: {sum}")
+
+
+sumpair()'''
+
