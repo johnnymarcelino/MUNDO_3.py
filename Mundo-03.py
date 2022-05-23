@@ -1615,3 +1615,34 @@ contador(int(input("Start at: ")), int(input("End at: ")), int(input("Pass: ")))
 
 # CHALLENGE 99
 
+'''from time import sleep
+def bigger(*any):
+    major = 0
+    # if()
+    print("="*25)
+    print("Verifying the values inserted!")
+    print(f"The values informed are: ", end="")
+    for cd in list(any):
+        sleep(.5)
+        # if(cd != list()):
+        #     print("There was not any value informed")
+        # else:
+        print(f"{cd} ", end="")
+        if(cd == list[0]):
+            major = cd
+        else:
+            if(cd > major):
+                major = cd
+    print(f"so were informed {len(list(any))} at all!")
+    print(f"The biggest informed value was {major}")
+    # print(list(any))
+    # print("="*15)
+
+
+# print("="*25)
+bigger(4, 5, 45, 42, 20, 7)
+bigger(50, 0, 54, 60, 1)
+bigger(21, 91, 2)
+bigger(4)
+bigger()'''
+
