@@ -1520,16 +1520,21 @@ dobra(valores)
 print(valores)'''
 
 # CHALLENGE 96
+# Faça um programa que tenha uma função chamada área(), que receba as dimensões de um terreno retangular
+# por exemplo: (largura e comprimento) e mostre a área do terreno.
 
-'''print("  Controle de Terrenos ")
-print("-"*20)
-def area(l, c):
+'''def area(l, c):
     print(f"The area of a land {l}x{c} is {l*c:5.2f}m².")
 
 
+print("  Controle de Terrenos ")
+print("-"*20)
 area(float(input("LENGTH (m): ")), float(input("WIDTH (m): ")))'''
 
 # CHALLENGE 97
+# Faça um programa que tenha uma função chamada escreva()
+# que receba um texto qualquer como parâmetro e mostre uma mensagem com tamanho adaptável.
+# Ex: escreva(‘Olá, Mundo!’) Saída: ~~~~~~~~~ Olá, Mundo! ~~~~~~~~~
 
 '''def escreva(txt):
     print("-"*len(txt))
@@ -1542,6 +1547,9 @@ escreva(str(input("Type any text: ")))
 escreva(str(input("Type any text: ")))'''
 
 # CHALLENGE 98
+# Faça um programa que tenha uma função chamada contador(), que receba três parâmetros: início, fim e passo.
+# Seu programa tem que realizar três contagens através da função criada:
+# a) de 1 até 10, de 1 em 1 b) de 10 até 0, de 2 em 2 c) uma contagem personalizada
 
 '''from time import sleep
 def contador(s, e, p):
@@ -1551,7 +1559,7 @@ def contador(s, e, p):
         if(s > e):
             for x in range(s, e-1, -1):
                 print(x, end=" ")
-                sleep(0.1)
+                sleep(0.5)
                 a += 3
             print("END")
             print("="*a)
@@ -1560,7 +1568,7 @@ def contador(s, e, p):
             print(f"Count from {s} to {e} from {p + 1} to {p + 1}!")
             for x in range(s, e+1, 1):
                 print(x, end=" ")
-                sleep(.1)
+                sleep(.5)
                 a += 3
             print("END")
             print("=" * a)
@@ -1581,10 +1589,10 @@ def contador(s, e, p):
     else:
         if(s > e and p < 0):
             # print("Now it is your time to personalize the count!")
-            print(f"Count from {s} to {e} from {1} to {1}!")
+            print(f"Count from {s} to {e} from {p*(-1)} to {p*(-1)}!")
             for x in range(s, e - 1, p):
                 print(x, end=" ")
-                sleep(.1)
+                sleep(.5)
                 a += 3
             print("END")
             print("=" * a)
@@ -1593,19 +1601,19 @@ def contador(s, e, p):
             print(f"Count from {s} to {e} from {p} to {p}!")
             for x in range(s, e-1, -p):
                 print(x, end=" ")
-                sleep(.1)
+                sleep(.5)
                 a += 3
             print("END")
             print("=" * a)
-        # else:
-            # print("Now it is your time to personalize the count!")
-            # print(f"Count from {s} to {e} from {p} to {p}!")
-            # for x in range(s, e+1, p):
-            #     print(x, end=" ")
-            #     sleep(.1)
-            #     a += 3
-            # print("END")
-            # print("=" * a)
+        else:
+            print("Now it is your time to personalize the count!")
+            print(f"Count from {s} to {e} from {p} to {p}!")
+            for x in range(s, e+1, p):
+                print(x, end=" ")
+                sleep(.5)
+                a += 3
+            print("END")
+            print("=" * a)
 
 
 contador(1, 10, 1)
@@ -1614,25 +1622,31 @@ print("Now it is your time to personalize the count!")
 contador(int(input("Start at: ")), int(input("End at: ")), int(input("Pass: ")))'''
 
 # CHALLENGE 99
+# Faça um programa que tenha uma função chamada maior(), que receba vários parâmetros com valores inteiros.
+# Seu programa tem que analisar todos os valores e dizer qual deles é o maior.
 
 '''from time import sleep
+
 def bigger(*any):
     major = 0
     # if()
     print("="*25)
     print("Verifying the values inserted!")
     print(f"The values informed are: ", end="")
-    for cd in list(any):
-        sleep(.5)
-        # if(cd != list()):
-        #     print("There was not any value informed")
-        # else:
-        print(f"{cd} ", end="")
-        if(cd == list[0]):
-            major = cd
-        else:
-            if(cd > major):
+    if(len(any) >= 0):
+        for cd in list(any):
+            sleep(.5)
+            # if(cd != list()):
+            #     print("There was not any value informed")
+            # else:
+            print(f"{cd} ", end="")
+            if(cd == list[0]):
                 major = cd
+            else:
+                if(cd > major):
+                    major = cd
+    else:
+        print("There was not any value informed")
     print(f"so were informed {len(list(any))} at all!")
     print(f"The biggest informed value was {major}")
     # print(list(any))
@@ -1640,6 +1654,7 @@ def bigger(*any):
 
 
 # print("="*25)
+# MAIN PROGRAM
 bigger(4, 5, 45, 42, 20, 7)
 bigger(50, 0, 54, 60, 1)
 bigger(21, 91, 2)
@@ -1647,9 +1662,15 @@ bigger(4)
 bigger()'''
 
 # CHALLENGE 100
+# Faça um programa que tenha uma lista chamada números e duas funções chamadas sorteia() e somaPar().
+# A primeira função vai sortear 5 números e vai colocá-los dentro da lista
+# e a segunda função vai mostrar a soma entre todos os valores pares sorteados pela função anterior.
+
 
 '''from random import randint
 from time import sleep
+
+
 numbers = []
 def drawn():
     print("Drawn 5 values ", end="")
@@ -1658,7 +1679,7 @@ def drawn():
         # print(f"{numbers}")
         # for x in numbers:
         print(f"{numbers[num]} ", end="")
-        sleep(0.4)
+        sleep(0.1)
 
 
 drawn()
