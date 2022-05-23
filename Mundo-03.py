@@ -1698,3 +1698,125 @@ sumpair()'''
 
 # CLASS 21
 
+# INTERACTIVE HELP
+
+'''print(help())
+help(print("Olá"))'''
+
+# MANUAL OR SIMPLE -> DOCSTRING
+
+'''# def contador(i, f, p):
+#     """
+#     -> Faz uma contagem e mostra na tela.
+#     :param i: Ínicio da contagem
+#     :param f: Fim da contagem
+#     :param p: Passo da contagem
+#     :return: sem retorno
+#     Função criada pelo Johnny Marcelino
+#     """
+#     c = i
+#     while(c <= f):
+#         print(f"{c}", end="")
+#         c += p
+#     print("Fim")
+# 
+# help(contador)'''
+
+# OPTIONAL PARAMETERS
+
+'''# def somar(a, b=0, c=0):  # parameter optional -> value = 0
+def somar(a=0, b=5, c=4):  # parameter optional -> value = 0 another value = 1 :ex
+    """
+    -> Faz a soma de três valores e mostra o resultado na tela.
+    :param a: O primeiro valor
+    :param b: O segundo valor
+    :param c: O terceiro valor
+    :return: sem retorno
+    Function created by Johnny Marcelino
+    """
+    s = a + b + c
+    print(f"The sum of {a, b, c} is {s}")
+
+
+# somar(3, 2, 4)
+# somar(3, 2)
+somar(b=3, c=2)
+help(somar)'''
+
+
+# SCOPE OF VARIABLES
+
+'''def local():
+    x = 10
+    print(f"At the function/local the value of 'x' is {x}")
+    print(f"At the function/local, the value of n is: {n}")
+
+
+
+# main program
+n = 2
+print(f"In the main program, n vale {n}")
+print(f"In the main program, x vale {x}")
+local()'''
+
+'''def function():
+    n1 = 4
+    print(f"Value of N1 in is {n1}")
+    print("The value of N1 is: {}".format(n1))
+
+
+# main program
+n1 = 2
+print(f"The value of N1 out is: {n1}")
+function()'''
+
+# RETURNING VALUES
+
+'''def retr(a=0, b=0, c=0):
+    s = a + b + c
+    # print("A soma vale {}".format(s))
+    return s
+
+
+r1 = retr(9, 8, 5)
+r2 = retr(7, 5, 5)
+r3 = retr(4, 9)
+
+# print(retr(9, 8, 5))
+# print(retr(7, 5, 5))
+# print(retr(4, 9))
+print(f"The sum total is: {r1, r2, r3}")'''
+
+'''def factorial(num=1):
+    f = 1
+    for c in range(num, 0, -1):
+        f *= c
+    return f
+
+
+# n = int(input("Type here a number: "))
+# a = factorial(n)
+# print(a)
+# print(f"The factorial of {n} is {factorial(n)}")
+a = factorial(5)
+b = factorial(4)
+c = factorial(3)
+d = factorial(2)
+print(f"The factorial are: {a, b, c, 'and', d}")'''
+
+'''def pair(n=0):
+    if(n % 2 == 0):
+        return True
+    else:
+        return False
+
+
+num = int(input("Type here any number "))
+# a = pair(num)  # Or
+print(pair(num))
+# print(a)
+if(pair(num)):
+    print("It's a pair")
+else:
+    print("It's not a pair")'''
+
