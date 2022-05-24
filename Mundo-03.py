@@ -1822,3 +1822,18 @@ else:
 
 # CHALLENGE 101
 
+
+'''from datetime import date
+def voto(bth):
+    if(date.today().year - bth < 16):
+        age = date.today().year - bth
+        return print(f"YOU'RE {age}'s, SO VOTE NEGATE!")
+    elif(date.today().year - bth == 16 and date.today().year - bth < 18 or date.today().year - bth > 70):
+        age = date.today().year - bth
+        return print(f"YOU'RE {age}'s, SO OPTIONAL VOTE!")
+    else:
+        age = date.today().year - bth
+        return print(f"YOU'RE {age}'s, SO VOTE OBLIGATE!")
+
+
+voto(int(input("Which year did you birth? ")))'''
