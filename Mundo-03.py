@@ -1820,3 +1820,5 @@ if(pair(num)):
 else:
     print("It's not a pair")'''
 
+# CHALLENGE 101
+
