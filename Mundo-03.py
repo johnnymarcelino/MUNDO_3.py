@@ -1866,4 +1866,17 @@ factorial(int(input("Enter with any number: ")), show=True)
 # factorial(5, show=False)
 # help(factorial)'''
 
-# CHALLENGE 103
+# CHALLENGE 103 - UNCOMPLETED
+
+def ficha(name = "<Unknow>", golas = "0"):
+    if(len(name)== 0):
+        print(f"The player {name} scored {golas} goals in the championship!")
+    else:
+        print(f"The player {name} scored {golas} goals in the championship!")
+
+
+print("="*40)
+name = str(input("What is the name of the player ? "))
+goals = str(input("How many goals the player scored ? "))
+ficha(name, goals)
+# ficha()
