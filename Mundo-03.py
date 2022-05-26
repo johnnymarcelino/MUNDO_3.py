@@ -1838,4 +1838,30 @@ def voto(bth):
 
 voto(int(input("Which year did you birth? ")))'''
 
-# CHALLENGE 101
+# CHALLENGE 102
+
+'''def factorial(id, show=False):
+    """
+    -> Calculate a factorial of a number (id)
+    :param id: The number fot accounting
+    :param show: (Optional) show or not the calculation
+    :return: The value of a factorial of number id
+    """
+    f = 1
+    for c in range(id, 0, -1):
+        f *= c
+    if(show == True):
+        f = 1
+        for c in range(id, 0, -1):
+            f *= c
+            if(c > 1):
+                print(f"{c} x", end=" ")
+            else:
+                print("1", end=" ")
+        return print(f"= {f}")
+    else:
+        return print(f)
+
+factorial(int(input("Enter with any number: ")), show=True)
+# factorial(5, show=False)
+# help(factorial)'''
