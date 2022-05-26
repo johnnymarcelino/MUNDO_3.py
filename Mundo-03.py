@@ -1869,10 +1869,14 @@ factorial(int(input("Enter with any number: ")), show=True)
 # CHALLENGE 103 - UNCOMPLETED
 
 '''def ficha(name = "<Unknow>", golas = "0"):
+    if(len(name) == 0 and len(golas) == 0):
+        return print(f"The player <Unknow> scored 0 goals in the championship!")
     if(len(name)== 0):
-        print(f"The player {name} scored {golas} goals in the championship!")
+        return print(f"The player <Unknow> scored {golas} goals in the championship!")
+    if(len(golas) == 0):
+        return print(f"The player {name} scored 0 goals in the championship!")
     else:
-        print(f"The player {name} scored {golas} goals in the championship!")
+        return print(f"The player {name} scored {golas} goals in the championship!")
 
 
 print("="*40)
@@ -1880,3 +1884,28 @@ name = str(input("What is the name of the player ? "))
 goals = str(input("How many goals the player scored ? "))
 ficha(name, goals)
 # ficha()'''
+
+# CHALLENGE 104
+
+def readint(integer):
+    print(integer, end="")
+    a = input("")
+    a = int(a)
+    if(a + a != a - a):
+        return n
+    else:
+        print(n)
+    while(a + a != a - a ):
+        print(integer, end="")
+        a = input("")
+        a = int(a)
+        if (a * a != 2 * a):
+            return n
+        else:
+            print(n)
+    else:
+        print(n)
+
+
+n = readint("Enter with a number integer: ")
+print(f"You chose the number {n}!")
