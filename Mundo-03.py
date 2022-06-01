@@ -1866,7 +1866,7 @@ factorial(int(input("Enter with any number: ")), show=True)
 # factorial(5, show=False)
 # help(factorial)'''
 
-# CHALLENGE 103 - UNCOMPLETED
+# CHALLENGE 103 - COMPLETED WITH 'GAMBIARRA'
 
 '''def ficha(name = "<Unknow>", golas = "0"):
     if(len(name) == 0 and len(golas) == 0):
@@ -1890,21 +1890,22 @@ ficha(name, goals)
 def readint(integer):
     print(integer, end="")
     a = input("")
-    a = int(a)
-    if(a + a != a - a):
-        return n
+    # a = int(a)
+    if(int(a) + int(a) == int(a + a)):
+        return a
+    # else:
+    #     print(n)
+    #     while(a == False):
+    #         print(integer, end="")
+    #         a = input("")
+    #         a = int(a)
+    #         if (a * a != 2 * a):
+    #             return n
+    #         else:
+    #             print(n)
     else:
-        print(n)
-    while(a + a != a - a ):
-        print(integer, end="")
-        a = input("")
-        a = int(a)
-        if (a * a != 2 * a):
-            return n
-        else:
-            print(n)
-    else:
-        print(n)
+        if(int(a) + int(a) != int(a + a)):
+            return print("Error!")
 
 
 n = readint("Enter with a number integer: ")
