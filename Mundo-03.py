@@ -1703,24 +1703,29 @@ sumpair()'''
 '''print(help())
 help(print("Olá"))'''
 
+
+'''print(input.__doc__)
+help(input)'''
+
+
 # MANUAL OR SIMPLE -> DOCSTRING
 
-'''# def contador(i, f, p):
-#     """
-#     -> Faz uma contagem e mostra na tela.
-#     :param i: Ínicio da contagem
-#     :param f: Fim da contagem
-#     :param p: Passo da contagem
-#     :return: sem retorno
-#     Função criada pelo Johnny Marcelino
-#     """
-#     c = i
-#     while(c <= f):
-#         print(f"{c}", end="")
-#         c += p
-#     print("Fim")
-# 
-# help(contador)'''
+'''def contador(i, f, p):
+    """
+    -> Faz uma contagem e mostra na tela.
+    :param i: Ínicio da contagem
+    :param f: Fim da contagem
+    :param p: Passo da contagem
+    :return: sem retorno
+    Função criada pelo Johnny Marcelino
+    """
+    c = i
+    while(c <= f):
+        print(f"{c}", end="")
+        c += p
+    print("Fim")
+
+help(contador)'''
 
 # OPTIONAL PARAMETERS
 
@@ -1747,6 +1752,7 @@ help(somar)'''
 # SCOPE OF VARIABLES
 
 '''def local():
+    global x
     x = 10
     print(f"At the function/local the value of 'x' is {x}")
     print(f"At the function/local, the value of n is: {n}")
@@ -1755,9 +1761,11 @@ help(somar)'''
 
 # main program
 n = 2
+x = 4
 print(f"In the main program, n vale {n}")
 print(f"In the main program, x vale {x}")
-local()'''
+local()
+print(f"At the function/local the value of 'x' is {x}")'''
 
 '''def function():
     n1 = 4
@@ -1887,26 +1895,68 @@ ficha(name, goals)
 
 # CHALLENGE 104
 
-def readint(integer):
+'''def readint(integer):
     print(integer, end="")
     a = input("")
     # a = int(a)
     if(int(a) + int(a) == int(a + a)):
         return a
-    # else:
-    #     print(n)
-    #     while(a == False):
-    #         print(integer, end="")
-    #         a = input("")
-    #         a = int(a)
-    #         if (a * a != 2 * a):
-    #             return n
-    #         else:
-    #             print(n)
     else:
-        if(int(a) + int(a) != int(a + a)):
-            return print("Error!")
+        print(n)
+        while(a == False):
+            print(integer, end="")
+            a = input("")
+            a = int(a)
+            if (a * a != 2 * a):
+                return n
+            else:
+                print(n)
+    # else:
+    #     if(int(a) + int(a) != int(a + a)):
+    #         return print("Error!")
 
 
 n = readint("Enter with a number integer: ")
-print(f"You chose the number {n}!")
+print(f"You chose the number {n}!")'''
+
+
+'''def leiaInt(num):
+    if(num == True):
+        return n
+    else:
+        while(type(num) != float):
+            num = leiaInt(int(input("Digite um número: ")))
+
+
+n = leiaInt(int(input("Digite um número: ")))
+print(f"Voce acabou de digitar o número {n}!")'''
+
+# CHALLENGE 105
+
+'''def notas(**nt):
+    print(f"a nota do primeira nt {nt}")
+
+
+nota = input("digite a sua nota!")
+notas(nota)'''
+
+# CHALLENGE 106
+
+'''def intcHelp(a):
+    print("~~"*30)
+    print(f"{a:^60}")
+    print("~~"*30)
+    global b
+    b = input("Digite uma função ou biblioteca: ").upper().strip()
+    if(b == "FIM"):
+        return b
+    print()
+    print("~~"*30)
+    print(help(b))
+    print("~~"*30)
+    
+
+b = "s"
+while(b != "FIM"):
+    a = intcHelp("SISTEMA DE AJUDA PYHELP!")
+    # c = intcHelp("SISTEMA DE AJUDA PYHELP!")'''
