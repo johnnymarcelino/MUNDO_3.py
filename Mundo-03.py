@@ -1829,10 +1829,12 @@ else:
     print("It's not a pair")'''
 
 # CHALLENGE 101
+# Crie um programa que tenha uma função chamada voto() que vai receber como parâmetro o ano de nascimento de uma pessoa,
+# retornando um valor literal indicando se uma pessoa tem voto NEGADO, OPCIONAL e OBRIGATÓRIO nas eleições.
 
 
-'''from datetime import date
-def voto(bth):
+'''def voto(bth):
+    from datetime import date
     if(date.today().year - bth < 16):
         age = date.today().year - bth
         return print(f"YOU'RE {age}'s, SO VOTE NEGATE!")
@@ -1844,9 +1846,13 @@ def voto(bth):
         return print(f"YOU'RE {age}'s, SO VOTE OBLIGATE!")
 
 
+# Main Program
 voto(int(input("Which year did you birth? ")))'''
 
 # CHALLENGE 102
+# Crie um programa que tenha uma função fatorial() que receba dois parâmetros:
+# o primeiro que indique o número a calcular e outro chamado show,
+# que será um valor lógico (opcional) indicando se será mostrado ou não na tela o processo de cálculo do fatorial.
 
 '''def factorial(id, show=False):
     """
@@ -1858,7 +1864,8 @@ voto(int(input("Which year did you birth? ")))'''
     f = 1
     for c in range(id, 0, -1):
         f *= c
-    if(show == True):
+    # if(show == True):
+    if(show):
         f = 1
         for c in range(id, 0, -1):
             f *= c
@@ -1870,47 +1877,62 @@ voto(int(input("Which year did you birth? ")))'''
     else:
         return print(f)
 
-factorial(int(input("Enter with any number: ")), show=True)
+# factorial(int(input("Enter with any number: ")), True)
 # factorial(5, show=False)
-# help(factorial)'''
+help(factorial)'''
 
 # CHALLENGE 103 - COMPLETED WITH 'GAMBIARRA'
+# Faça um programa que tenha uma função chamada ficha(), que receba dois parâmetros opcionais:
+# o nome de um jogador e quantos gols ele marcou.
+# O programa deverá ser capaz de mostrar a ficha do jogador, mesmo que algum dado não tenha sido informado corretamente.
 
-'''def ficha(name = "<Unknow>", golas = "0"):
-    if(len(name) == 0 and len(golas) == 0):
-        return print(f"The player <Unknow> scored 0 goals in the championship!")
-    if(len(name)== 0):
-        return print(f"The player <Unknow> scored {golas} goals in the championship!")
-    if(len(golas) == 0):
-        return print(f"The player {name} scored 0 goals in the championship!")
+'''def ficha(name = "<Unknow>", goals = "0"):
+    if(name.strip() == "" or goals.isnumeric()):
+        return print(f"The player {name} scored {goals} goals in the championship!")
+    if(name.strip() == ""):
+        return print(f"The player {name} scored {goals} goals in the championship!")
+    if(len(goals) == 0):
+        return print(f"The player {name} scored {goals} goals in the championship!")
     else:
-        return print(f"The player {name} scored {golas} goals in the championship!")
+        return print(f"The player {name} scored {goals} goals in the championship!")
 
 
+# Main Program
 print("="*40)
 name = str(input("What is the name of the player ? "))
 goals = str(input("How many goals the player scored ? "))
-ficha(name, goals)
-# ficha()'''
+# if(goals.isnumeric()):
+#     goals = int(goals)
+# else:
+#     goals = 0
+# if(name.strip() == ""):
+#     ficha(goals)
+# else:
+#     ficha(name, goals)
+ficha(name, goals)'''
 
-# CHALLENGE 104
+# CHALLENGE 104 - COMPLETED
+# Crie um programa que tenha a função leiaInt(), que vai funcionar de forma semelhante ‘a função input() do Python,
+# só que fazendo a validação para aceitar apenas um valor numérico.
+# Ex: n = leiaInt(‘Digite um n: ‘)
 
 '''def readint(integer):
     print(integer, end="")
     a = input("")
     # a = int(a)
-    if(int(a) + int(a) == int(a + a)):
+    if(a.isnumeric()):
         return a
     else:
-        print(n)
-        while(a == False):
-            print(integer, end="")
-            a = input("")
-            a = int(a)
-            if (a * a != 2 * a):
-                return n
-            else:
-                print(n)
+        print("\033[0;31mERROR! Enter with a valid number integer!\033[m")
+        return readint(integer)
+        # while(a == False):
+        #     print(integer, end="")
+        #     a = input("")
+        #     a = int(a)
+        #     if (a * a != 2 * a):
+        #         return n
+        #     else:
+        #         print(n)
     # else:
     #     if(int(a) + int(a) != int(a + a)):
     #         return print("Error!")
@@ -1919,44 +1941,80 @@ ficha(name, goals)
 n = readint("Enter with a number integer: ")
 print(f"You chose the number {n}!")'''
 
+# SOLUTION FROM GUANABARA
 
 '''def leiaInt(num):
-    if(num == True):
-        return n
-    else:
-        while(type(num) != float):
-            num = leiaInt(int(input("Digite um número: ")))
+    ok = False
+    global valor
+    valor = 0
+    while True:
+        n = input(num)
+        if n.isnumeric():
+            valor = int(n)
+            ok = True
+        else:
+            print("\033[0;31mERROR! Enter with a valid number integer!\033[m")
+            # print(valor, ok)
+        if ok:
+            break
+    # return valor
+        # num = leiaInt(int(input("Digite um número: ")))
 
 
-n = leiaInt(int(input("Digite um número: ")))
-print(f"Voce acabou de digitar o número {n}!")'''
+n = leiaInt("Digite um número: ")
+print(f"Voce acabou de digitar o número {valor}!")'''
 
 # CHALLENGE 105
+# Faça um programa que tenha uma função notas() que pode receber várias notas de alunos
+# e vai retornar um dicionário com as seguintes informações:
+# – Quantidade de notas | – A maior nota  |  – A menor nota  |   – A média da turma |  – A situação (opcional)
 
-'''def notas(**nt):
-    print(f"a nota do primeira nt {nt}")
 
+'''def notas(*nt, sit=False):
+    r = {}
+    r['total'] = len(nt)
+    r['maior'] = max(nt)
+    r['menor'] = min(nt)
+    r['média'] = sum(nt)/len(nt)
+    if(sit):
+        if(r['média'] > 7):
+            r['sit'] = "Ótima"
+        elif(r['média'] >= 5):
+            r['sit'] = "Boa"
+        else:
+            r['si'] = "Péssima"
+    return r
 
-nota = input("digite a sua nota!")
-notas(nota)'''
+# nota = input("digite a sua nota!")
+resp = notas(7, 8.4, 9, 4.2, sit=False)
+print(resp)'''
 
 # CHALLENGE 106
+# Faça um mini-sistema que utilize o Interactive Help do Python.
+# O usuário vai digitar o comando e o manual vai aparecer.
+# Quando o usuário digitar a palavra ‘FIM’, o programa se encerrará.
+# Importante: use cores.
 
 '''def intcHelp(a):
     print("~~"*30)
     print(f"{a:^60}")
     print("~~"*30)
     global b
-    b = input("Digite uma função ou biblioteca: ").upper().strip()
-    if(b == "FIM"):
+    b = input("Digite uma função ou biblioteca: ")
+    if((b.upper().strip()) == "FIM"):
         return b
-    print()
-    print("~~"*30)
-    print(help(b))
-    print("~~"*30)
-    
+    else:
+        print()
+        print("~~"*30)
+        print(help(b))
+        print("~~"*30)
 
-b = "s"
+
+b = ""
 while(b != "FIM"):
     a = intcHelp("SISTEMA DE AJUDA PYHELP!")
-    # c = intcHelp("SISTEMA DE AJUDA PYHELP!")'''
+    # c = intcHelp("SISTEMA DE AJUDA PYHELP!")
+    if((b.upper().strip()) == "FIM"):
+        break
+    # break
+print("Até Logo")'''
