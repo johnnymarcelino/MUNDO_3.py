@@ -2060,3 +2060,21 @@ while True:
     else:
         ajuda(comando)
 titulo("ATÉ LOGO!", 1)'''
+
+
+# CLASS 22
+# MÓDULOS E PACOTES
+
+'''# import uteis
+# from uteis import fatorial, dobro
+from uteis import numeros
+
+
+num = int(input("Digite um número: "))
+fat = numeros.fatorial(num)
+dobro = numeros.dobro(num)
+triplo = numeros.triplo(num)
+print(f"O fatorial de {num} é {fat}")
+print(f"O dobro de {num} é {numeros.dobro(num)}")
+print(f"O triplo de {num} é {numeros.triplo(num)}")'''
+
