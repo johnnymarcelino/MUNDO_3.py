@@ -8,7 +8,6 @@
 '''for count in range(0, len(lanche)):
     print(f"Vou comer {lanche[count]} na posição {count}")
 print("Comi pra caramba")'''
-import random
 
 '''for comida in lanche:
     print(f"Vou comer {comida}")
@@ -157,23 +156,23 @@ print(f"The drawn numbers was: {tupla}")
 print(f"The bigger number was {m}")
 print(f"The lower number was {n}")'''
 
-    # b = str(a)
-    # tupla1 = str(a)
-    # del(a)
-    # d = str(a)
-    # tupla2 = b + tupla1
-    # del(b)
-    # e = str(d)
-    # tupla3 = e + tupla1 + tupla2
-    # del(d)
-    # f = str(e)
-    # tupla4 = f + tupla1 + tupla2 + tupla3
-    # del(e)
-    # g = str(f)
-    # tupla5 = g + tupla1 + tupla2 + tupla3 + tupla4
-    # del(f)
-    # total = list(tupla5)
-    # print(d)
+# b = str(a)
+# tupla1 = str(a)
+# del(a)
+# d = str(a)
+# tupla2 = b + tupla1
+# del(b)
+# e = str(d)
+# tupla3 = e + tupla1 + tupla2
+# del(d)
+# f = str(e)
+# tupla4 = f + tupla1 + tupla2 + tupla3
+# del(e)
+# g = str(f)
+# tupla5 = g + tupla1 + tupla2 + tupla3 + tupla4
+# del(f)
+# total = list(tupla5)
+# print(d)
 
 # SOLUTION FROM GUANABARA
 
@@ -272,9 +271,8 @@ for pos in range(0, len(listing)):
     else:
         print(f"{listing[pos]:>7.2f}")'''
 
-
 # CHALLENGE 77
-#Crie um programa que tenha uma tupla com várias palavras (não usar acentos).
+# Crie um programa que tenha uma tupla com várias palavras (não usar acentos).
 # Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
 
 '''lotWords = ("rice", "mouse", "notebook", "chair", "tv", "light", "sofa", "plate", "screem", "aleloui")
@@ -398,7 +396,6 @@ print(f"You entered with the values: {valNum}")
 print(f"O biggest value entered was {max(valNum)}, in the positions {rankMax}")
 print(f"O lowest value entered was {min(valNum)}, in the positions {rankMin}")'''
 
-
 # ////////////////////////////////////////////////////////
 
 # Done
@@ -492,7 +489,6 @@ print(f"\nThe lowest number entered was: {lower}, and are in the position: ", en
 for pos, valueB in enumerate(lista):
     if(valueB == lower):
         print(f"{pos}", end="...")'''
-
 
 # CHALLENGE 79
 # Crie um programa onde o usuário possa digitar vários valores numéricos e cadastre-os em uma lista.
@@ -602,7 +598,6 @@ for b, a in enumerate(range(0, 10)):
 print("="*60)
 print(f"Você cadastrou, em ordem, os números: {lista}")
 print(len(lista))'''
-
 
 # CHALLENGE 81
 # Crie um programa que vai ler vários números e colocar em uma lista. Depois disso, mostre:
@@ -863,7 +858,6 @@ for n in lista_de_numeros:
     if n % 2 != 0:
         print(f'{n} ', end='')'''
 
-
 # for n in numeros:
 #     # if(n % 2 == 0):
 #     numeros.append([n[numeros]])
@@ -945,7 +939,6 @@ for numero in matriz:
     for numero1 in numero:
         print(f"[{numero1:^5}]", end=" ")
     print()'''
-
 
 # CHALLENGE 87
 # Aprimore o desafio anterior, mostrando no final.
@@ -1250,7 +1243,6 @@ print("   == RANKING OF THE PLAYERS ==")
 for i, v in enumerate(ranking):
     print(" "*3, f"{i+1}º place: {v[0]} with {v[1]}.")
     sleep(1)'''
-
 
 # print(player)
 # print()
@@ -1703,10 +1695,8 @@ sumpair()'''
 '''print(help())
 help(print("Olá"))'''
 
-
 '''print(input.__doc__)
 help(input)'''
-
 
 # MANUAL OR SIMPLE -> DOCSTRING
 
@@ -1747,7 +1737,6 @@ def somar(a=0, b=5, c=4):  # parameter optional -> value = 0 another value = 1 :
 # somar(3, 2)
 somar(b=3, c=2)
 help(somar)'''
-
 
 # SCOPE OF VARIABLES
 
@@ -2061,7 +2050,6 @@ while True:
         ajuda(comando)
 titulo("ATÉ LOGO!", 1)'''
 
-
 # CLASS 22
 # MÓDULOS E PACOTES
 
@@ -2077,7 +2065,6 @@ triplo = numeros.triplo(num)
 print(f"O fatorial de {num} é {fat}")
 print(f"O dobro de {num} é {numeros.dobro(num)}")
 print(f"O triplo de {num} é {numeros.triplo(num)}")'''
-
 
 # CHALLENGE 107
 
@@ -2097,16 +2084,16 @@ print(f"The increase of 10% of {p} é {aumentar(p, 10):.2f} R$")  # then the val
 # print(f" And the value is{a}")
 # print(f"The decrease of 10% of {p} is {diminuir(p, 10):.2f} R$"),  # then the value total is{moeda.diminuir(p)}")'''
 
-
 # CHALLENGE 108
 
-'''# def ():
+# def ():
 #     from moeda import metade
 #     return metade
 
 
-p = float(input("Enter with the price: "))
-import moeda
+'''p = float(input("Enter with the price: "))
+from uteis import moeda
+
 # print(moeda.metade(p))
 # print(moeda.moeda(moeda.metade(p)))
 print(f"The half of {moeda.moeda(p)} is {moeda.moeda(moeda.metade(p))}")
@@ -2114,8 +2101,61 @@ print(f"The double of {p} is {moeda.dobro(p):.2f} R$")
 print(f"The increase of 10% of {p} é {moeda.aumentar(p):.2f} R$")  # then the value total is")
 # a = moeda.totalDim(p)
 # print(f" And the value is{a}")
-print(f"The decrease of 10% of {p} is {moeda.diminuir(p):.2f} R$"),  # then the value total is{moeda.diminuir(p)}")
-'''
+print(f"The decrease of 10% of {p} is {moeda.diminuir(p):.2f} R$"),  # then the value total is{moeda.diminuir(p)}")'''
 
 # CHALLENGE 109
+# Modifique as funções que form criadas no desafio 107 para que elas aceitem um parâmetro a mais,
+# informando se o valor retornado por elas vai ser ou não formatado pela função moeda(), desenvolvida no desafio 108.
 
+
+'''p = float(input("Enter with the price: R$"))
+from uteis import moeda
+
+
+# print(moeda.metade(p))
+# print(moeda.moeda(moeda.metade(p)))
+print(f"The half of {moeda.moeda(p)} is {moeda.metade((p, True))}")
+print(f"The double of {p} is {moeda.dobro(p, True)} R$")
+print(f"The increase of 10% of {p} é {moeda.aumentar(p, 10, True)}")  # then the value total is
+# a = moeda.totalDim(p)
+# print(f" And the value is{a}")
+print(f"The decrease of 10% of {p} is {moeda.diminuir(p, 13, True)} R$"),  # then the value total is{moeda.diminuir(p)}")'''
+
+# CHALLENGE 110
+# Adicione o módulo moeda.py criado nos desafios anteriores, uma função chamada resumo(),
+# que mostre na tela algumas informações geradas pelas funções que já temos no módulo criado até aqui
+
+
+'''from uteis import moeda
+
+
+p = float(input("Digite o preço: R$ "))
+moeda.resumo(p)'''
+
+
+# CHALLENGE 111
+# Crie um pacote chamado utilidadesCeV que tenha dois módulos internos chamados moeda e dado.
+# Transfira todas as funções utilizadas nos desafios 107, 108 e 109 para o primeiro pacote e mantenha tudo funcionando.
+
+'''from uteis.utilidadesCeV import moeda
+# import uteis
+
+
+p = float(input("Digite o preço: R$ "))
+moeda.resumo(p, 12, 19)'''
+
+# CHALLENGE 112
+
+# Dentro do pacote utilidadesCeV que criamos no desafio 111, temos um módulo chamado dado.
+# Crie uma função chamada leiaDinheiro() que seja capaz de funcionar como a função imputa(),
+# mas com uma validação de dados para aceitar apenas valores que seja monetários.
+
+'''from uteis.utilidadesCeV import dados, moeda
+
+
+p = dados.leiaDinheiro("Digite o preço: R$")
+moeda.resumo(p, 13, 10)
+# dados.leiaDinheiro(p)
+# p = float(p)
+# moeda.resumo(p)
+'''
