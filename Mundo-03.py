@@ -2079,3 +2079,42 @@ print(f"O dobro de {num} é {numeros.dobro(num)}")
 print(f"O triplo de {num} é {numeros.triplo(num)}")'''
 
 
+# CHALLENGE 107
+
+# productValue = float(input("How much is the product ? "))
+# myMoney = float(input("How much money do you have ? "))
+# print(f"O valor do produto é {productValue} and you have {myMoney}, then ", end="")
+# print(f"you will received a charged of {myMoney - productValue}")
+# import moeda
+
+'''# import moeda
+from moeda import metade, dobro, aumentar
+p = float(input("Enter with the price: R$"))
+print(f"The half of {p} is {metade(p)} R$")
+print(f"The double of {p} is {dobro(p):.2f} R$")
+print(f"The increase of 10% of {p} é {aumentar(p, 10):.2f} R$")  # then the value total is")
+# a = moeda.totalDim(p)
+# print(f" And the value is{a}")
+# print(f"The decrease of 10% of {p} is {diminuir(p, 10):.2f} R$"),  # then the value total is{moeda.diminuir(p)}")'''
+
+
+# CHALLENGE 108
+
+'''# def ():
+#     from moeda import metade
+#     return metade
+
+
+p = float(input("Enter with the price: "))
+import moeda
+# print(moeda.metade(p))
+# print(moeda.moeda(moeda.metade(p)))
+print(f"The half of {moeda.moeda(p)} is {moeda.moeda(moeda.metade(p))}")
+print(f"The double of {p} is {moeda.dobro(p):.2f} R$")
+print(f"The increase of 10% of {p} é {moeda.aumentar(p):.2f} R$")  # then the value total is")
+# a = moeda.totalDim(p)
+# print(f" And the value is{a}")
+print(f"The decrease of 10% of {p} is {moeda.diminuir(p):.2f} R$"),  # then the value total is{moeda.diminuir(p)}")
+'''
+
+# CHALLENGE 109
