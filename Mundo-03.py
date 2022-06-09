@@ -2190,3 +2190,46 @@ finally:
 
 # CHALLENGE 113
 
+def readInt(integer):
+    try:
+        print(integer, end="")
+        intNum = input()
+        if(intNum.isnumeric()):
+            return intNum  #print(f"You have chosen the number {number}")
+        else:
+            print("\033[0;31mERROR! Enter with a valid integer number!\033[m")
+            return readInt(integer)
+    except KeyboardInterrupt:
+        print(f"\033[0;31mUser wished not to enter this number\033[m")
+        intNum = 0
+        # return print(f"The integer value entered was {intNum} and the real was {floNum}")
+        return intNum
+
+
+def readFlo(real):
+    try:
+        print(real, end="")
+        floNum = input().replace(".", ",")
+        # floNum = float(floNum)
+        # a = isinstance(floNum, float)
+        # global a
+        # a = float(floNum) / 1
+        if(floNum.replace(",", "").isnumeric()):
+            floNum = float(floNum.replace(",", "."))
+            return print(f"The integer value entered was {intNum} and the real was {floNum}")
+        else:
+            print("\033[0;31mERROR! Enter with a float number!\033[m")
+            return readFlo(real)
+    except KeyboardInterrupt:
+        print(f"\033[0;31mUser wished not to enter this number\033[m")
+        floNum = 0
+        return print(f"The integer value entered was {intNum} and the real was {floNum}") # floNum #  print(f"{floNum}")
+    except Exception as error:
+        print(f"The ERROR was {error}")
+
+
+intNum = readInt("Enter with a integer number: ")
+floNum = readFlo("Enter with a real number: ")
+# print(f"The integer value entered was {intNum} and the real was {floNum}")
+# print(f"You have chosen the integer number: {intNum}")
+# print(f"You have chosen the float number: {floNum}")
