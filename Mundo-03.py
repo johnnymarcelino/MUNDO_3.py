@@ -2159,3 +2159,31 @@ moeda.resumo(p, 13, 10)
 # p = float(p)
 # moeda.resumo(p)
 '''
+
+
+# CLASS 22
+# ERROS E EXCEÇÕES E TRATAMENTOS
+
+try:
+    a = int(input("Enter with a number: "))
+    b = int(input("Enter with a number: "))
+    r = a / b
+except (TypeError, ValueError):
+    print("We have some problems with the datas that you entered")
+except ZeroDivisionError:
+    print("It is not possible to divide by zero")
+except KeyError:
+    print("Problem with your key")
+except KeyboardInterrupt:
+    print("The user wished not informed the datas!")
+except Exception as erro:
+    print()
+    print("Unfortunately we have some problems!")
+    print(f"The problem found was {erro.__class__}")
+    print(f"The problem found was {erro.__cause__}")
+else:
+    print()
+    print(f"The division of 'a' between 'b' is: {r:.2f}!")
+finally:
+    print()
+    print("Come Back Always!")
