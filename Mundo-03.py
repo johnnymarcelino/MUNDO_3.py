@@ -2190,7 +2190,7 @@ finally:
 
 # CHALLENGE 113
 
-def readInt(integer):
+'''def readInt(integer):
     try:
         print(integer, end="")
         intNum = input()
@@ -2232,4 +2232,20 @@ intNum = readInt("Enter with a integer number: ")
 floNum = readFlo("Enter with a real number: ")
 # print(f"The integer value entered was {intNum} and the real was {floNum}")
 # print(f"You have chosen the integer number: {intNum}")
-# print(f"You have chosen the float number: {floNum}")
+# print(f"You have chosen the float number: {floNum}")'''
+
+
+# CHALLENGE 114
+
+
+'''# import urllib
+import urllib.request
+
+try:
+    site = urllib.request.urlopen("http://pudim.com.br/")
+    # if(urllib.request.):
+    print("The site is access at the moment!")
+except urllib.request.URLError:
+    print("The site isn't access at the moment!")
+# except Exception as error:
+#     print(f"The ERROR found was ==> {error}")'''
