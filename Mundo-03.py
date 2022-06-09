@@ -750,7 +750,7 @@ heaviestLi = list()
 lightestLi = list()
 person = 0
 while True:
-    nome.append(str(input("What is your name: ")))
+    nome.append(str(input("What is your system: ")))
     nome.append(float(input("How much weight are you: ")))
     contOrBrk = str(input("Would like to continue [Y / N] ? "))
     dada.append(nome[:])
@@ -1163,12 +1163,12 @@ print(brasil)'''
 
 '''notaFinal = {}
 while True:
-    notaFinal['name'] = str(input("What is your name ? "))
+    notaFinal['system'] = str(input("What is your system ? "))
     notaFinal['media'] = float(input("What is your media grade in school ? "))
-    print(f"Name is {notaFinal['name']}")
+    print(f"Name is {notaFinal['system']}")
     print(f"Media is {notaFinal['media']}")
     if(notaFinal['media'] >= 7):
-        # print(f"{notaFinal['name']} you were approved in the test, cause your media grade was {notaFinal['media']}!")
+        # print(f"{notaFinal['system']} you were approved in the test, cause your media grade was {notaFinal['media']}!")
         notaFinal['situation'] = 'APPROVED'
         print(f"Situation is equal APPROVED!")
     else:
@@ -1182,8 +1182,8 @@ while True:
 print(notaFinal)'''
 
 # phonebook = {"John": 938477566, "Jack": 938377264, "Jill": 947662781}
-# for name, number in phonebook.items():
-#     print("Phone number of %s is %d" % (name, number))
+# for system, number in phonebook.items():
+#     print("Phone number of %s is %d" % (system, number))
 
 # CHALLENGE 91 - COMPLETED
 # Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios.
@@ -1262,13 +1262,13 @@ for i, v in enumerate(ranking):
 
 '''from datetime import datetime
 employee = {}
-employee["name"] = str(input("What is your name ? "))
+employee["system"] = str(input("What is your system ? "))
 employee["age"] = int(input("Which year do you born ? "))
 employee["spjc"] = int(input("What is the number of your work card ? [0] In case not have "))
 employee["age"] = datetime.now().year - employee["age"]
 if(employee["spjc"] == 0):
     print("=-=" * 15)
-    print(f" - Your name is {employee['name']}!")
+    print(f" - Your system is {employee['system']}!")
     print(f" - You are {employee['age']} years old!")
     print(f" - The number of your job card is {employee['spjc']}")
 else:
@@ -1276,7 +1276,7 @@ else:
     employee["salary"] = float(input("What is your salary currently ? "))
     employee["wlRetire"] = (35 - (datetime.now().year - employee["started"])) + employee["age"]
     print("=-=" * 15)
-    print(f"  - Your name is {employee['name']}!")
+    print(f"  - Your system is {employee['system']}!")
     print(f"  - You are {employee['age']} years old!")
     print(f"  - The number of your job card is {employee['spjc']}")
     print(f"  - Your currently salary is {employee['salary']}")
@@ -1292,15 +1292,15 @@ print(employee)'''
 
 
 '''play_better = {}
-play_better["name"] = str(input("Name: "))
-match = int(input(f"How many match {play_better['name']} have played: "))
+play_better["system"] = str(input("Name: "))
+match = int(input(f"How many match {play_better['system']} have played: "))
 count = 0
 lista = []  # Matches does
 # play_better["goals"] = {}
 for g in range(match):
-    lista.append(int(input(f"   How many goals did {play_better['name']} score in match {g+1}: ")))
+    lista.append(int(input(f"   How many goals did {play_better['system']} score in match {g+1}: ")))
     count += lista[g]
-    # play_better["goals"] = list[int(input(f"How many goals did {play_better['name']} score in match {g}: "))]
+    # play_better["goals"] = list[int(input(f"How many goals did {play_better['system']} score in match {g}: "))]
     # play_better["totalGoals"] = play_better["goals"].copy()
 # play_better["goals"] = int(input(f"How many goals did you score in {play_better['match']} match: "))
 # play_better["performance"] = play_better["match"] / count
@@ -1315,8 +1315,8 @@ print("=-="*20)
 for k, v in play_better.items():
     print(f"The field {k} has the value {v}")
 print("=-="*20)
-# print(f"Your name is {play_better['name']}")
-print(f"Player {play_better['name']} played {len(play_better['goals'])} matches")
+# print(f"Your system is {play_better['system']}")
+print(f"Player {play_better['system']} played {len(play_better['goals'])} matches")
 # print()
 c = 1
 for each, goal in play_better.items():
@@ -1338,7 +1338,7 @@ pep = {}
 sum = 0
 count = 0
 while True:
-    pep["name"] = str(input("What is your name: "))
+    pep["system"] = str(input("What is your system: "))
     pep["sex"] = str(input("Which sex do you think to attribute better you [M / F]: ")).strip().upper()[0]
     while(pep["sex"] not in "MF"):
         print("ERROR! Please, type only 'M' or 'F'")
@@ -1365,7 +1365,7 @@ count = 0
 for item in data:
     for w, m in item.items():
         if(m == "F"):
-            print(f"{item['name']}", end=", ")
+            print(f"{item['system']}", end=", ")
             count += 1
 print()
 if(count > 0):
@@ -1377,7 +1377,7 @@ for age in data:
             a = per
         if(per == "age"):
             if(ave > (sum/len(data))):
-                print(f" -{age['name']}, who is {ave} in {a}: {age['sex']}")  # GAMBIARRA HAHA - ASSIM É LÓGICA -> age.keys()
+                print(f" -{age['system']}, who is {ave} in {a}: {age['sex']}")  # GAMBIARRA HAHA - ASSIM É LÓGICA -> age.keys()
 print()
 print("====== PROGRAM FINISHED! ========")
 # print(data)'''
@@ -1393,12 +1393,12 @@ goals = []
 play_better = {}
 gp = 0
 while True:
-    play_better["name"] = str(input("Name: "))
-    play_better["match"] = int(input(f"How many match {play_better['name']} have played: "))
+    play_better["system"] = str(input("Name: "))
+    play_better["match"] = int(input(f"How many match {play_better['system']} have played: "))
     for cada, valor in play_better.items():
         if(cada == "match"):
             for g in range(valor):
-                goals.append(int(input(f"How many goals did {play_better['name']} score in match {g+1}: ")))
+                goals.append(int(input(f"How many goals did {play_better['system']} score in match {g+1}: ")))
                 count += goals[g]
     play_better["goals"] = goals[:]
     play_better["total"] = count
@@ -1411,12 +1411,12 @@ while True:
         break
 # print(lista)
 print("=-="*20)
-print(f"cod name{'match':>13}{'goals':>13}{'total':>16}")
+print(f"cod system{'match':>13}{'goals':>13}{'total':>16}")
 print("-"*60)
 c1 = 0
 # print(lista)
 for pl in lista:
-    print(f"{c1} {pl['name']:>10}{pl['match']:>10}{' ':>10}{pl['goals']}", f"{pl['total']:>10}")
+    print(f"{c1} {pl['system']:>10}{pl['match']:>10}{' ':>10}{pl['goals']}", f"{pl['total']:>10}")
     c1 += 1
 print("-"*60)
 while True:
@@ -1427,7 +1427,7 @@ while True:
         print(f"ERRO! There is not player in code {data}! Try again")
         print("-" * 60)
     else:
-        print(f"{'--':>2} statistic of player {lista[data]['name']}")
+        print(f"{'--':>2} statistic of player {lista[data]['system']}")
         for qunt in range(len(lista)):
             if(data == qunt):
                 # for dtpy in lista[data]:
@@ -1875,30 +1875,30 @@ help(factorial)'''
 # o nome de um jogador e quantos gols ele marcou.
 # O programa deverá ser capaz de mostrar a ficha do jogador, mesmo que algum dado não tenha sido informado corretamente.
 
-'''def ficha(name = "<Unknow>", goals = "0"):
-    if(name.strip() == "" or goals.isnumeric()):
-        return print(f"The player {name} scored {goals} goals in the championship!")
-    if(name.strip() == ""):
-        return print(f"The player {name} scored {goals} goals in the championship!")
+'''def ficha(system = "<Unknow>", goals = "0"):
+    if(system.strip() == "" or goals.isnumeric()):
+        return print(f"The player {system} scored {goals} goals in the championship!")
+    if(system.strip() == ""):
+        return print(f"The player {system} scored {goals} goals in the championship!")
     if(len(goals) == 0):
-        return print(f"The player {name} scored {goals} goals in the championship!")
+        return print(f"The player {system} scored {goals} goals in the championship!")
     else:
-        return print(f"The player {name} scored {goals} goals in the championship!")
+        return print(f"The player {system} scored {goals} goals in the championship!")
 
 
 # Main Program
 print("="*40)
-name = str(input("What is the name of the player ? "))
+system = str(input("What is the system of the player ? "))
 goals = str(input("How many goals the player scored ? "))
 # if(goals.isnumeric()):
 #     goals = int(goals)
 # else:
 #     goals = 0
-# if(name.strip() == ""):
+# if(system.strip() == ""):
 #     ficha(goals)
 # else:
-#     ficha(name, goals)
-ficha(name, goals)'''
+#     ficha(system, goals)
+ficha(system, goals)'''
 
 # CHALLENGE 104 - COMPLETED
 # Crie um programa que tenha a função leiaInt(), que vai funcionar de forma semelhante ‘a função input() do Python,
@@ -2249,3 +2249,6 @@ except urllib.request.URLError:
     print("The site isn't access at the moment!")
 # except Exception as error:
 #     print(f"The ERROR found was ==> {error}")'''
+
+
+# CHALLENGE 115

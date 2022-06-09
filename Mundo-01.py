@@ -4,9 +4,9 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-'''def print_hi(name):
+'''def print_hi(system):
     # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.'''
+    print(f'Hi, {system}')  # Press Ctrl+F8 to toggle the breakpoint.'''
 
 
 # Press the green button in the gutter to run the script.
@@ -29,28 +29,28 @@ print(holla_mundo)'''
 
 # Testes de pycharm
 
-'''def print_hi(name):
+'''def print_hi(system):
     if(johhny == "gabriel"):
         print("Hello World!")'''
 # print_hi("Johnny") # test of function print_hi()
 
 # Exercício Python 2: Faça um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.
 '''
-nome = str(input("What is your name: "))
+nome = str(input("What is your system: "))
 print("Seja bem-vindo, {}!" .format(nome))'''
 
-'''start = print("Write down your name below! ")
-name = input()
-b = input("In case you write down your name, type 'y' for Yes and 'n' for No.")
+'''start = print("Write down your system below! ")
+system = input()
+b = input("In case you write down your system, type 'y' for Yes and 'n' for No.")
 saudacao = ("It's a pleasure to meet you, ")
 
 if (b == "y"):
-    print(saudacao, name, "Program finished!")
+    print(saudacao, system, "Program finished!")
 else:
     while(b != "n" or "y"):
-            start = print("Write down your name below, cause the letter", b, "it's not a variable avalible!")
-            name = input()
-            b = input("In case you write down your name, type 'y' for Yes and 'n' for No.")
+            start = print("Write down your system below, cause the letter", b, "it's not a variable avalible!")
+            system = input()
+            b = input("In case you write down your system, type 'y' for Yes and 'n' for No.")
             saudacao = ("It's a pleasure to meet you, ")
 '''
 # I stopped on class number 06
@@ -134,7 +134,7 @@ else:
 # Aula 07
 # coding: utf-8
 
-'''nome = str(input("What is your name: "))
+'''nome = str(input("What is your system: "))
 print("Seja bem-vindo, {:=<50}!" .format(nome))'''
 '''div = float(input("typw any number for divisor: "))
 numr = float(input("Type any number for number"))
@@ -354,10 +354,10 @@ print("The value of sin is {:.2f}, cos is {:.2f} and tangent is {:.2f}".format(a
 # students = list[input("Enter here with the names of students: ")]
 '''from random import choice
 
-student1 = str((input("Enter with the name of the first student (number 1): ")))
-student2 = str((input("Enter with the name of the second student (number 2): ")))
-student3 = str((input("Enter with the name of the third student (number 3): ")))
-student4 = str((input("Enter with the name of the fourth student (number 4): ")))
+student1 = str((input("Enter with the system of the first student (number 1): ")))
+student2 = str((input("Enter with the system of the second student (number 2): ")))
+student3 = str((input("Enter with the system of the third student (number 3): ")))
+student4 = str((input("Enter with the system of the fourth student (number 4): ")))
 
 lista = [student4, student3, student2, student1]
 chosen = choice(lista)
@@ -374,10 +374,10 @@ print("Lucky student was: {}".format(lucky))'''
 # challenge 19
 
 '''from random import shuffle
-a = input("Enter here with the name of the fist group: ")
-b = input("Enter here with the name of the second group: ")
-c = input("Enter here with the name of the third group: ")
-d = input("Enter here with the name of the fourth group: ")
+a = input("Enter here with the system of the fist group: ")
+b = input("Enter here with the system of the second group: ")
+c = input("Enter here with the system of the third group: ")
+d = input("Enter here with the system of the fourth group: ")
 
 list = [a, b, c, d]
 shuffle(list)
@@ -427,32 +427,32 @@ playsound.playsound("Track01")'''
 
 # Aula 09
 
-# name = "johnny gabriel pereira marcelino"
-# dict(name)
-# print(name, 0)
-'''name = "Johnny gabriel pereira marcelino"
-print(name)
-print(len(name))
-print(len(name[4:15]))
-print(name.count("p"))
-print(name.count("o", 0, 31))
-print(name.find("mar"))
-print(name.find("hello"))  # Not encountered return -1
+# system = "johnny gabriel pereira marcelino"
+# dict(system)
+# print(system, 0)
+'''system = "Johnny gabriel pereira marcelino"
+print(system)
+print(len(system))
+print(len(system[4:15]))
+print(system.count("p"))
+print(system.count("o", 0, 31))
+print(system.find("mar"))
+print(system.find("hello"))  # Not encountered return -1
 
-a = "johnny" in name
+a = "johnny" in system
 print(a)
 
-b = name.replace("pereira", "style")
+b = system.replace("pereira", "style")
 print(b)
 
-all_upper = name.upper()
+all_upper = system.upper()
 print(all_upper)
-all_lower = name.lower()
+all_lower = system.lower()
 print(all_lower)
 
-cap = name.capitalize()
+cap = system.capitalize()
 print(cap)
-titl = name.title()
+titl = system.title()
 print(titl)
 
 name1 = "   maria de fatima  "
@@ -489,14 +489,14 @@ print(list[2][4])'''
 
 # Challenge 22
 
-'''name = str(input("Enter here with your full name: "))
-print(name)
-print("Your name in uppercase is {}".format(name.upper()))
-print("Your name in lowercase is {}".format(name.lower()))
-print("Your name have {} lyrics".format(len(name.replace(" ", ""))))
-name1 = name.split()
+'''system = str(input("Enter here with your full system: "))
+print(system)
+print("Your system in uppercase is {}".format(system.upper()))
+print("Your system in lowercase is {}".format(system.lower()))
+print("Your system have {} lyrics".format(len(system.replace(" ", ""))))
+name1 = system.split()
 print(len(name1[0]))
-print(len(list(name)))'''
+print(len(list(system)))'''
 
 # Challenge 23
 
@@ -540,7 +540,7 @@ upper = cidade.upper()
 inSant = upper.split()
 sant = inSant[0]
 haveSant = "SANTO" in sant
-print("Whether 'Santo' was into in your first city name, the value 'False' = 'Not', "
+print("Whether 'Santo' was into in your first city system, the value 'False' = 'Not', "
       "and 'True' = 'Yes', then this answered: \n{}!".format(haveSant))'''
 
 
@@ -549,9 +549,9 @@ print("Whether 'Santo' was into in your first city name, the value 'False' = 'No
 
 # Challenge 25
 
-'''name = input("Enter here with your name: ").strip().upper()
-in_silva = "SILVA" in name
-print("Have your name has 'Silva': {}!".format(in_silva))'''
+'''system = input("Enter here with your system: ").strip().upper()
+in_silva = "SILVA" in system
+print("Have your system has 'Silva': {}!".format(in_silva))'''
 
 # Challenge 26
 
@@ -587,20 +587,20 @@ print(len(splitA))'''
 
 # Challenge 27
 
-'''fullname = str(input("Enter with your full name: ")).strip().upper()
+'''fullname = str(input("Enter with your full system: ")).strip().upper()
 a = fullname.split()
-print("Your first name is {}, and the last name is {}".format(a[0], a[-1]))
+print("Your first system is {}, and the last system is {}".format(a[0], a[-1]))
 print(a[0], a[-1])
 # print(a[-1])'''
 
 # AULA 10
 
-'''name = str(input("Enter with your first name: ")).strip().upper()
+'''system = str(input("Enter with your first system: ")).strip().upper()
 
-if(name == "JOHNNY"):
-      print("What a beafully name you have! ")
+if(system == "JOHNNY"):
+      print("What a beafully system you have! ")
 
-print("Good Morning {}.".format(name))'''
+print("Good Morning {}.".format(system))'''
 
 # Challenge 28
 
@@ -731,15 +731,15 @@ else:
 
 # AULA 11
 
-'''colors = input("\033[7;30;44m Enter with your name: \033[m")
+'''colors = input("\033[7;30;44m Enter with your system: \033[m")
 print("\033[4;33;47m", colors, "\033[m")
 a = 10
 b = 20
 
 print("The values are \033[35m{} and  \033[30;44m{}\033[30;44m".format(a, b),"\033[m")
 
-name = input("Type your name: ")
-print("It's a pleasure to meet you, {}{}{}!".format("\033[4;34m", name, "\033[m"))'''
+system = input("Type your system: ")
+print("It's a pleasure to meet you, {}{}{}!".format("\033[4;34m", system, "\033[m"))'''
 
 # AULA 12
 
@@ -819,9 +819,9 @@ elif(birth_age > enlist):
 
 # CHALLENGE 40
 
-'''name = str(input("What is your name ? "))
-grade = float(input("Whats is your first grade in this semester {} ? ".format(name)))
-grade1 = float(input("Whats is your second grade in this semester {} ? ".format(name)))
+'''system = str(input("What is your system ? "))
+grade = float(input("Whats is your first grade in this semester {} ? ".format(system)))
+grade1 = float(input("Whats is your second grade in this semester {} ? ".format(system)))
 media = (grade + grade1) / 2
 reproved = 5
 recovery = 6.9
@@ -829,21 +829,21 @@ approved = 7
 
 if(media >= approved):
     print("CONGRATS!")
-    print("You have been approved {} !!".format(name))
+    print("You have been approved {} !!".format(system))
     print("Your media final in this semester was {}!".format(media))
 elif(media >= reproved and media <= recovery):
-    print("{}, I hope you study more!".format(name))
+    print("{}, I hope you study more!".format(system))
     print("You are in recovery!!")
     print("Your media final in this semester was {}!".format(media))
 elif(media < reproved):
-    print("I AM SORRY {}!!!".format(name))
+    print("I AM SORRY {}!!!".format(system))
     print("You have not passed!!!")
     print("Your media final in this semester was {}!".format(media))'''
 
 # CHALLENGE 41
 '''from datetime import date
 
-name = str(input("What is your name ? "))
+system = str(input("What is your system ? "))
 birth_year = int(input("Which year did you birth ? "))
 current_year = date.today().year
 mirim = 9
@@ -1194,8 +1194,8 @@ else:
 notAdult = 0
 adult = 0
 for age in range(1, 7+1, 1):
-    name = int(input("You are the {}º\nWhich year did you born ? ".format(age)))
-    if(date.today().year - name >= 21):
+    system = int(input("You are the {}º\nWhich year did you born ? ".format(age)))
+    if(date.today().year - system >= 21):
         # print("You're an adult!")
         adult = adult + 1
         print("IS ADULT!", adult)
@@ -1241,11 +1241,11 @@ e = 0
 f = 0
 peaple = 4
 for a in range(0, peaple):
-    name = str(input("What is your name ? ")).strip().upper()
+    system = str(input("What is your system ? ")).strip().upper()
     age = int(input("How old are you ? "))
     sex = str(input("What is your sex ? Type 'm' for male or 'f' for female: ")).strip().upper()
     print("="*20)
-    print("NAME: {}".format(name))
+    print("NAME: {}".format(system))
     print("AGE: {}".format(age))
     print("SEX: {}".format(sex))
     print("="*20)
@@ -1253,12 +1253,12 @@ for a in range(0, peaple):
     if(age > b):  # and sex == "male")  # if('M' in 'Mm' and sex blablabla):
         if(sex == "M"):
             b = age
-            n = name
+            n = system
     else:
         if(age < d):  # if('F' in 'Ff' and sex blablabla):
             if(sex == "F"):
                 e += 1
 ma = f / peaple
 print("The age media of this group is {}!".format(ma))
-print("The older man name is {} with {}!".format(n, b))
+print("The older man system is {} with {}!".format(n, b))
 print("The amount of women in this group with age less than 20 years old is {}!".format(e))'''

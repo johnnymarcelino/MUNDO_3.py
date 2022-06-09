@@ -39,17 +39,17 @@ print("The amount of even numbers were {}, and the amount of odd numbers were {}
 # Exercício Python 57: Faça um programa que leia o sexo de uma pessoa, mas só aceite os valores ‘M’ ou ‘F’.
 # Caso esteja errado, peça a digitação novamente até ter um valor correto.
 
-'''name = str(input("What is your sex ?\nType 'M' for male or 'F' for female: ")).upper()[0]
-if(name == "M"):
+'''system = str(input("What is your sex ?\nType 'M' for male or 'F' for female: ")).upper()[0]
+if(system == "M"):
     m = "Male"
     print("Your sex is {}!".format(m))
 else:
-    if(name == "F"):
+    if(system == "F"):
         f = "Female"
         print("Your sex is {}!".format(f))
-while(name != "F" and name != "M"):
-    name = str(input("What is your sex ?\nType 'M' for male or 'F' for female: ")).upper()[0]
-    if(name == "M"):
+while(system != "F" and system != "M"):
+    system = str(input("What is your sex ?\nType 'M' for male or 'F' for female: ")).upper()[0]
+    if(system == "M"):
         m = "Male"
         print("Your sex is {}!".format(m))
     else:
@@ -445,11 +445,11 @@ print("The value of the sum is {}".format(s))'''
 
 # f' STRINGS
 
-'''name = "Johnny"
+'''system = "Johnny"
 age = 26
 salary = 987.35
-# print(f"The name of him is {name} and his is {age}")
-print(f"The {name:->20} is {age} and make R$ {salary:.2f} for month!")'''
+# print(f"The system of him is {system} and his is {age}")
+print(f"The {system:->20} is {age} and make R$ {salary:.2f} for month!")'''
 
 # CHALLENGE 66
 
@@ -687,7 +687,7 @@ lista2 = list()
 # product1 = str()
 # while(user[0] == "Y" or user[0] != "N"):
 while True:
-    product = str(input("What is the name of this product ? ")).strip().upper()
+    product = str(input("What is the system of this product ? ")).strip().upper()
     price = float(input("What is your price ? "))
     valueTotal += price
     lista.append(product)
@@ -720,8 +720,8 @@ while True:
     #         break
 print(f"The total value spent was {valueTotal:.2f} and they are: {lista}")
 print(f"The amount of product with the value up to $ 1000.00 is {one_hundred}, and they are: {lista1}")
-print(f"The name of the product cheaper is {cheaper_product}, its value is {cheaper} and they are: {lista2}")
-print(f"The name of the product more expensive is {expensive_product} and its value is {expensive}")'''
+print(f"The system of the product cheaper is {cheaper_product}, its value is {cheaper} and they are: {lista2}")
+print(f"The system of the product more expensive is {expensive_product} and its value is {expensive}")'''
 
 # CHALLENGE 71
 
