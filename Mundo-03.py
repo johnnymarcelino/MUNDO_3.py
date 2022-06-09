@@ -2164,7 +2164,7 @@ moeda.resumo(p, 13, 10)
 # CLASS 22
 # ERROS E EXCEÇÕES E TRATAMENTOS
 
-try:
+'''try:
     a = int(input("Enter with a number: "))
     b = int(input("Enter with a number: "))
     r = a / b
@@ -2186,4 +2186,7 @@ else:
     print(f"The division of 'a' between 'b' is: {r:.2f}!")
 finally:
     print()
-    print("Come Back Always!")
+    print("Come Back Always!")'''
+
+# CHALLENGE 113
+
