@@ -52,7 +52,7 @@ def option():
         if(choice == 3):
             from time import sleep
             sleep(2)
-            print("Quiting of the System so long")
+            print("Logging out of the System so far!")
     # else:
     #     while (choice > 3 or choice < 0):
     #         print("\033[0;31mERROR!\033[m")
