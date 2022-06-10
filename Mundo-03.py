@@ -2189,6 +2189,10 @@ finally:
     print("Come Back Always!")'''
 
 # CHALLENGE 113
+# Reescreva a função leiaInt() que fizemos no desafio 104,
+# incluindo agora a possibilidade da digitação de um número de tipo inválido.
+# Aproveite e crie também uma função leiaFloat() com a mesma funcionalidade.
+
 
 '''def readInt(integer):
     try:
@@ -2234,24 +2238,76 @@ floNum = readFlo("Enter with a real number: ")
 # print(f"You have chosen the integer number: {intNum}")
 # print(f"You have chosen the float number: {floNum}")'''
 
+# SOLUTOIN FROM GUANABARA
+
+'''def leiaInt(msg):
+    while True:
+        try:
+            n = int(input(msg))
+        except (ValueError, TypeError):
+            print("\033[0;31mPor favor, digite um valor inteiro válido\033[m")
+            continue
+        except KeyboardInterrupt:
+            print("\033[0;31mPor favor, digite um valor inteiro válido\033[m")
+            return 0
+        else:
+            return n
+
+
+def leiaFloat(msg):
+    while True:
+        try:
+            n = float(input(msg))
+        # except Exception as error:
+        #     print(f"O erro foi: {error}")
+        #     continue
+        except (ValueError, TypeError):
+            print("\033[0;31mPor favor, digite um valor real válido\033[m")
+            continue
+        except KeyboardInterrupt:
+            print("\033[0;31mO usuário preferiu não digitar esse valor\033[m")
+            return 0
+        else:
+            return n
+
+
+
+n1 = leiaInt("Digite um inteiro: ")
+n2 = leiaFloat("Digite um valor real: ")
+print(f"O valor inteiro digitado foi {n1} e o valor real é {n2}")'''
+
+
 
 # CHALLENGE 114
+# Crie um código em Python que teste se o site pudim está acessível pelo computador usado.
+
+# import urllib
+'''import urllib.request
 
 
-'''# import urllib
-import urllib.request
-
+# def checkSite():
+#     # while True:
 try:
-    site = urllib.request.urlopen("http://pudim.com.br/")
-    # if(urllib.request.):
-    print("The site is access at the moment!")
+    site = (urllib.request.urlopen("http://jort.com.br/"))
+    # print("The site is access at the moment!")
 except urllib.request.URLError:
     print("The site isn't access at the moment!")
-# except Exception as error:
-#     print(f"The ERROR found was ==> {error}")'''
+    # print(4+5)
+    # return site
+    # break
+else:
+    print("The site is access at the moment!")
+    # return site
+        # print(site.read)
+            # continue
+            # break
 
+
+# a = checkSite()
+# print(f"The site is: {a}")'''
 
 # CHALLENGE 115
+# Vamos criar um menu em Python, usando modularização.
 
 from MiniSystem import system
 

@@ -31,28 +31,57 @@ def newReg(msg):
 
 
 def option():
-    print("1 - See people's list")
-    print("2 - Registry new person")
-    print("3 - Quit of the system")
-    print("=" * 50)
-    choice = int(input("Your option: "))
-    # print("=" * 50)
-    while (choice > 3 or choice < 0):
-        print("=" * 50)
-        print("\033[0;31mERROR!\033[m")
-        print("\033[0;33mType only:\n1 - See people's list\n2 - Registry new person or\n3 - Quit of the system\033[m")
-        choice = int(input("Your option: "))
-    print("=" * 50)
-    # menu("="*30)
-    if (choice == 1):
-        seePeop()
-    elif (choice == 2):
-        newReg("NEW REGISTRY")
-    else:
-        if(choice == 3):
-            from time import sleep
-            sleep(2)
-            print("Logging out of the System so far!")
+    while True:
+        try:
+            print("\033[0;34m1 - See people's list\033[m")
+            print("\033[0;34m2 - Registry new person\033[m")
+            print("\033[0;34m3 - Quit of the system\033[m")
+            print("=" * 50)
+            choice = int(input("Your option: "))
+            # if(type(choice) != int(choice)):
+            #     while(type(choice) != int(choice)):
+            #         choice = int(input("Your option: "))
+            # if(choice.isnumeric()):
+            #     choice = int(choice)
+            # else:
+                # while(choice is not choice.isdigit()):
+                    # print("=" * 50)
+                    # print("\033[0;31mERROR!\033[m")
+                    # print(
+                    #     "\033[0;34mType only:\n1 - See people's list\n2 - Registry new person or\n3 - Quit of the system\033[m")
+                    # choice = input("Your option: ")
+            # print("=" * 50)
+        except:
+            print("=" * 50)
+            print("\033[0;31mERROR!\033[m")
+            print("\033[0;34mType only:\033[m")
+            # print(
+            #     "\033[0;34mType only:\n1 - See people's list\n2 - Registry new person or\n3 - Quit of the system\033[m")
+            # choice = int(input("Your option: "))
+            continue
+            # choice = input("Your option: ")
+        #     while(choice.isnumeric() != int(choice)):
+        #         print("=" * 50)
+        #         print("\033[0;31mERROR!\033[m")
+        #         print("\033[0;34mType only:\n1 - See people's list\n2 - Registry new person or\n3 - Quit of the system\033[m")
+        #         choice = int(input("Your option: "))
+        else:
+            while(choice > 3 or choice < 0):
+                print("=" * 50)
+                print("\033[0;31mERROR!\033[m")
+                print("\033[0;34mType only:\n1 - See people's list\n2 - Registry new person or\n3 - Quit of the system\033[m")
+                choice = int(input("Your option: "))
+            print("=" * 50)
+            # menu("="*30)
+            if (choice == 1):
+                seePeop()
+            elif (choice == 2):
+                newReg("NEW REGISTRY")
+            else:
+                if(choice == 3):
+                    from time import sleep
+                    sleep(2)
+                    print("Logging out of the System so far!")
     # else:
     #     while (choice > 3 or choice < 0):
     #         print("\033[0;31mERROR!\033[m")
@@ -73,11 +102,13 @@ def seePeop():
 
 def regPeop():
     name = str(input("Name: ")).strip()
-    while(name.isnumeric()):
+    while(name.isnumeric() or name == ""):
         print("\033[0;31mERROR!\033[m")
         print("\033[0;32mPlease, enter with only the name of person\033[m")
-        name = str(input("Name: "))
-    age = int(input("Age: "))
+        name = str(input("Name: ")).strip()
+    age = input("Age: ")
+    while(age.isnumeric() != True):
+        age = input("Age: ")
     people[name] = age
     # for last in people.values():
     #     if(last == name)
