@@ -1,5 +1,5 @@
 # def lists():
-from MiniSystem.system import *
+'''from MiniSystem.system import *
 from MiniSystem.arquivo import *
 people = {"Johnny Gabriel": 26, "Jorge Marcelino": 30, "Maria de Fatima": 67, "Clelia Pereira": 61, "Almir Aguiar": 34,
           "Cleiton Aguiar": 36, "Jéssica Lira": 29, "Lucas Cauan": 9, "Daniel Caique": 8}
@@ -135,3 +135,4 @@ def readFile(name):
         print(a.read())
     finally:
         option()
+'''
