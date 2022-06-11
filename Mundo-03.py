@@ -2309,6 +2309,15 @@ else:
 # CHALLENGE 115
 # Vamos criar um menu em Python, usando modularização.
 
+from MiniSystem.arquivo import *
+from MiniSystem.system import *
 from MiniSystem import system
 
+
+arq = "FileSystem.txt"
+
+if not(filExist(arq)):
+    creatFile(arq)
+
+# readFile(arq)
 system.menu()
